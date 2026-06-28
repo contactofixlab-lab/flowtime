@@ -66,6 +66,7 @@
 flowtime/
 ├── planificacion/          ← documentación del proyecto
 │   ├── diagramas/
+│   ├── mockups/
 │   └── *.md
 ├── prisma/
 │   └── schema.prisma       ← modelos de base de datos

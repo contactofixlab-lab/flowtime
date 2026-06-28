@@ -1,0 +1,121 @@
+<svg viewBox="0 0 400 900" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/>
+      <stop offset="50%" style="stop-color:#0D0D28"/>
+      <stop offset="100%" style="stop-color:#120A2E"/>
+    </linearGradient>
+    <linearGradient id="indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="navGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(15,15,40,0.95)"/>
+      <stop offset="100%" style="stop-color:rgba(10,10,30,0.98)"/>
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="25"/></filter>
+  </defs>
+
+  <rect width="400" height="900" fill="url(#bg)" rx="40"/>
+  <circle cx="320" cy="150" r="100" fill="rgba(79,70,229,0.09)" filter="url(#blur1)"/>
+
+  <!-- Status bar -->
+  <text x="24" y="26" fill="#94A3B8" font-size="11" font-weight="600">9:41</text>
+  <text x="376" y="26" text-anchor="end" fill="#94A3B8" font-size="11">●●●</text>
+
+  <!-- Header -->
+  <text x="200" y="64" text-anchor="middle" fill="#E2E8F0" font-size="20" font-weight="800">Configuración</text>
+
+  <!-- ── PROFILE SECTION ── -->
+  <rect x="16" y="80" width="368" height="110" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <circle cx="64" cy="135" r="30" fill="url(#indigo)" stroke="#4F46E5" stroke-width="2"/>
+  <text x="64" y="141" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">V</text>
+  <text x="110" y="120" fill="#E2E8F0" font-size="15" font-weight="700">Vicente Rabanales</text>
+  <text x="110" y="138" fill="#64748B" font-size="11">vrabanales@rcapcorp.cl</text>
+  <text x="110" y="156" fill="#475569" font-size="10">🌎 America/Santiago</text>
+  <rect x="310" y="120" width="62" height="26" rx="13" fill="rgba(79,70,229,0.2)" stroke="rgba(79,70,229,0.35)" stroke-width="1"/>
+  <text x="341" y="137" text-anchor="middle" fill="#818CF8" font-size="10" font-weight="700">Editar</text>
+
+  <!-- ── TELEGRAM SECTION ── -->
+  <text x="24" y="214" fill="#64748B" font-size="11" font-weight="700" letter-spacing="1">TELEGRAM</text>
+  <rect x="16" y="222" width="368" height="80" rx="16" fill="rgba(14,165,233,0.08)" stroke="rgba(14,165,233,0.2)" stroke-width="1"/>
+
+  <!-- Connected status -->
+  <text x="38" y="250" fill="#E2E8F0" font-size="13" font-weight="600">✈ Bot FlowTime</text>
+  <circle cx="340" cy="247" r="6" fill="#10B981"/>
+  <text x="352" y="251" fill="#34D399" font-size="10" font-weight="600">Activo</text>
+  <text x="38" y="268" fill="#64748B" font-size="11">Vinculado como @vincenterab</text>
+  <rect x="38" y="278" width="90" height="16" rx="8" fill="rgba(244,63,94,0.15)"/>
+  <text x="83" y="290" text-anchor="middle" fill="#FB7185" font-size="9">Desvincular</text>
+
+  <!-- ── NOTIFICATIONS ── -->
+  <text x="24" y="326" fill="#64748B" font-size="11" font-weight="700" letter-spacing="1">NOTIFICACIONES</text>
+
+  <rect x="16" y="334" width="368" height="56" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="36" y="356" fill="#E2E8F0" font-size="13">Recordatorios por Telegram</text>
+  <text x="36" y="374" fill="#64748B" font-size="10">Recibir avisos antes de vencer</text>
+  <!-- Toggle ON -->
+  <rect x="330" y="347" width="40" height="22" rx="11" fill="#4F46E5"/>
+  <circle cx="359" cy="358" r="9" fill="#fff"/>
+
+  <rect x="16" y="398" width="368" height="56" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="36" y="420" fill="#E2E8F0" font-size="13">Horario de silencio</text>
+  <text x="36" y="438" fill="#64748B" font-size="10">22:00 — 08:00 (sin notificaciones)</text>
+  <!-- Toggle OFF -->
+  <rect x="330" y="411" width="40" height="22" rx="11" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="341" cy="422" r="9" fill="rgba(255,255,255,0.4)"/>
+
+  <rect x="16" y="462" width="368" height="56" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="36" y="484" fill="#E2E8F0" font-size="13">Anticipación por defecto</text>
+  <text x="36" y="502" fill="#64748B" font-size="10">Recordar 30 min antes</text>
+  <text x="368" y="494" text-anchor="end" fill="#818CF8" font-size="12">30 min ›</text>
+
+  <!-- ── ETIQUETAS ── -->
+  <text x="24" y="542" fill="#64748B" font-size="11" font-weight="700" letter-spacing="1">ETIQUETAS</text>
+
+  <rect x="16" y="550" width="368" height="72" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <!-- Tags -->
+  <rect x="32" y="566" width="58" height="22" rx="11" fill="rgba(245,158,11,0.18)" stroke="rgba(245,158,11,0.35)" stroke-width="1"/>
+  <text x="61" y="581" text-anchor="middle" fill="#FBBF24" font-size="10">finanzas</text>
+  <rect x="98" y="566" width="54" height="22" rx="11" fill="rgba(79,70,229,0.18)" stroke="rgba(79,70,229,0.35)" stroke-width="1"/>
+  <text x="125" y="581" text-anchor="middle" fill="#818CF8" font-size="10">reportes</text>
+  <rect x="160" y="566" width="40" height="22" rx="11" fill="rgba(16,185,129,0.18)" stroke="rgba(16,185,129,0.35)" stroke-width="1"/>
+  <text x="180" y="581" text-anchor="middle" fill="#34D399" font-size="10">legal</text>
+  <rect x="208" y="566" width="52" height="22" rx="11" fill="rgba(244,63,94,0.18)" stroke="rgba(244,63,94,0.35)" stroke-width="1"/>
+  <text x="234" y="581" text-anchor="middle" fill="#FB7185" font-size="10">urgente</text>
+  <rect x="32" y="598" width="72" height="20" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="68" y="612" text-anchor="middle" fill="#64748B" font-size="10">+ Nueva</text>
+
+  <!-- ── APARIENCIA ── -->
+  <text x="24" y="648" fill="#64748B" font-size="11" font-weight="700" letter-spacing="1">APARIENCIA</text>
+
+  <rect x="16" y="656" width="368" height="54" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <rect x="20" y="660" width="110" height="46" rx="14" fill="rgba(79,70,229,0.22)" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+  <text x="75" y="685" text-anchor="middle" fill="#818CF8" font-size="11" font-weight="700">🌑 Dark</text>
+  <text x="210" y="685" text-anchor="middle" fill="#475569" font-size="11">☀ Light</text>
+  <text x="340" y="685" text-anchor="middle" fill="#475569" font-size="11">Auto</text>
+
+  <!-- ── CUENTA ── -->
+  <text x="24" y="736" fill="#64748B" font-size="11" font-weight="700" letter-spacing="1">CUENTA</text>
+  <rect x="16" y="744" width="368" height="42" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="36" y="769" fill="#64748B" font-size="13">Cerrar sesión</text>
+  <text x="368" y="769" text-anchor="end" fill="#475569" font-size="14">›</text>
+
+  <!-- Bottom Nav -->
+  <rect x="0" y="802" width="400" height="98" fill="url(#navGrad)"/>
+  <rect x="0" y="802" width="400" height="1" fill="rgba(255,255,255,0.06)"/>
+  <text x="53"  y="836" text-anchor="middle" font-size="18">📊</text>
+  <text x="53"  y="854" text-anchor="middle" fill="#475569" font-size="9">Inicio</text>
+  <text x="126" y="836" text-anchor="middle" font-size="18">✅</text>
+  <text x="126" y="854" text-anchor="middle" fill="#475569" font-size="9">Tareas</text>
+  <circle cx="200" cy="826" r="26" fill="url(#indigo)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <text x="200" y="833" text-anchor="middle" fill="#fff" font-size="22" font-weight="300">+</text>
+  <text x="274" y="836" text-anchor="middle" font-size="18">📅</text>
+  <text x="274" y="854" text-anchor="middle" fill="#475569" font-size="9">Calendario</text>
+  <rect x="318" y="812" width="64" height="52" rx="14" fill="rgba(79,70,229,0.25)" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+  <text x="350" y="836" text-anchor="middle" font-size="18">⚙️</text>
+  <text x="350" y="854" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">Config</text>
+
+  <rect x="140" y="4" width="120" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="200" y="880" text-anchor="middle" fill="#1E293B" font-size="11">FlowTime — Configuración</text>
+</svg>

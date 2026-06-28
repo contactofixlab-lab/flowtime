@@ -1,0 +1,157 @@
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/>
+      <stop offset="55%" style="stop-color:#0D0D26"/>
+      <stop offset="100%" style="stop-color:#120A2E"/>
+    </linearGradient>
+    <linearGradient id="indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="navPill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(20,20,48,0.92)"/>
+      <stop offset="100%" style="stop-color:rgba(10,10,28,0.96)"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="45"/></filter>
+    <filter id="pillGlow"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="softShadow"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+
+  <!-- Browser chrome -->
+  <rect width="1280" height="800" fill="#12121f" rx="12"/>
+  <rect x="0" y="0" width="1280" height="34" fill="#0c0c1a" rx="12"/>
+  <rect x="0" y="22" width="1280" height="12" fill="#0c0c1a"/>
+  <circle cx="14" cy="17" r="5" fill="#F43F5E" opacity="0.7"/>
+  <circle cx="30" cy="17" r="5" fill="#F59E0B" opacity="0.7"/>
+  <circle cx="46" cy="17" r="5" fill="#10B981" opacity="0.7"/>
+  <rect x="360" y="6" width="560" height="20" rx="10" fill="rgba(255,255,255,0.05)"/>
+  <text x="640" y="20" text-anchor="middle" fill="#334155" font-size="10">flowtime.app/settings</text>
+
+  <!-- App bg -->
+  <rect x="0" y="34" width="1280" height="766" fill="url(#bg)"/>
+  <circle cx="300"  cy="400" r="200" fill="rgba(79,70,229,0.08)" filter="url(#glow)"/>
+  <circle cx="1050" cy="300" r="180" fill="rgba(124,58,237,0.07)" filter="url(#glow)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="34" width="1280" height="60" fill="rgba(8,8,22,0.7)"/>
+  <rect x="0" y="93" width="1280" height="1" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="44" cy="64" r="16" fill="url(#indigo)"/>
+  <text x="44" y="70" text-anchor="middle" fill="#fff" font-size="13" font-weight="800">F</text>
+  <text x="70" y="68" fill="#E2E8F0" font-size="16" font-weight="800">FlowTime</text>
+  <circle cx="1264" cy="64" r="18" fill="url(#indigo)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="1264" y="69" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">V</text>
+
+  <!-- Page title -->
+  <text x="64" y="136" fill="#E2E8F0" font-size="28" font-weight="800">Configuración</text>
+
+  <!-- ══ TWO-COLUMN LAYOUT ══ -->
+
+  <!-- LEFT: Section menu -->
+  <rect x="64" y="158" width="260" height="480" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Profile item (active) -->
+  <rect x="72" y="166" width="244" height="44" rx="12" fill="rgba(79,70,229,0.22)" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+  <text x="96" y="193" fill="#818CF8" font-size="15">👤</text>
+  <text x="120" y="193" fill="#818CF8" font-size="13" font-weight="700">Perfil</text>
+
+  <rect x="72" y="218" width="244" height="44" rx="12"/>
+  <text x="96" y="245" fill="#475569" font-size="15">✈</text>
+  <text x="120" y="245" fill="#475569" font-size="13">Telegram</text>
+
+  <rect x="72" y="270" width="244" height="44" rx="12"/>
+  <text x="96" y="297" fill="#475569" font-size="15">🔔</text>
+  <text x="120" y="297" fill="#475569" font-size="13">Notificaciones</text>
+
+  <rect x="72" y="322" width="244" height="44" rx="12"/>
+  <text x="96" y="349" fill="#475569" font-size="15">🏷</text>
+  <text x="120" y="349" fill="#475569" font-size="13">Etiquetas</text>
+
+  <rect x="72" y="374" width="244" height="44" rx="12"/>
+  <text x="96" y="401" fill="#475569" font-size="15">🎨</text>
+  <text x="120" y="401" fill="#475569" font-size="13">Apariencia</text>
+
+  <line x1="80" y1="430" x2="296" y2="430" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <rect x="72" y="440" width="244" height="44" rx="12"/>
+  <text x="96" y="467" fill="#475569" font-size="15">🔑</text>
+  <text x="120" y="467" fill="#475569" font-size="13">Cambiar contraseña</text>
+
+  <rect x="72" y="492" width="244" height="44" rx="12"/>
+  <text x="96" y="519" fill="#FB7185" font-size="15">→</text>
+  <text x="120" y="519" fill="#FB7185" font-size="13">Cerrar sesión</text>
+
+  <rect x="72" y="544" width="244" height="44" rx="12"/>
+  <text x="96" y="571" fill="#F43F5E" font-size="13">🗑</text>
+  <text x="120" y="571" fill="#F43F5E" font-size="13">Eliminar cuenta</text>
+
+  <!-- RIGHT: Content panel — showing Perfil section -->
+  <rect x="344" y="158" width="872" height="480" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <text x="372" y="194" fill="#E2E8F0" font-size="18" font-weight="700">Perfil de Usuario</text>
+  <line x1="344" y1="206" x2="1216" y2="206" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Avatar section -->
+  <circle cx="408" cy="272" r="48" fill="url(#indigo)" stroke="#4F46E5" stroke-width="2"/>
+  <text x="408" y="282" text-anchor="middle" fill="#fff" font-size="34" font-weight="700">V</text>
+  <rect x="376" y="326" width="64" height="24" rx="12" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="408" y="342" text-anchor="middle" fill="#64748B" font-size="11">Cambiar foto</text>
+
+  <!-- Fields -->
+  <!-- Name -->
+  <text x="496" y="234" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">NOMBRE</text>
+  <rect x="496" y="242" width="680" height="40" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(79,70,229,0.4)" stroke-width="1.5"/>
+  <text x="516" y="267" fill="#E2E8F0" font-size="14">Vicente Rabanales</text>
+
+  <!-- Email -->
+  <text x="496" y="302" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">EMAIL</text>
+  <rect x="496" y="310" width="680" height="40" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="516" y="335" fill="#64748B" font-size="14">vrabanales@rcapcorp.cl</text>
+  <text x="1166" y="335" text-anchor="end" fill="#475569" font-size="10">Solo lectura</text>
+
+  <!-- Timezone -->
+  <text x="496" y="370" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">ZONA HORARIA</text>
+  <rect x="496" y="378" width="680" height="40" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="516" y="403" fill="#E2E8F0" font-size="14">🌎 America/Santiago (UTC-4)</text>
+  <text x="1166" y="403" text-anchor="end" fill="#818CF8" font-size="12">▼</text>
+
+  <!-- Language -->
+  <text x="496" y="438" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">IDIOMA</text>
+  <rect x="496" y="446" width="320" height="40" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="516" y="471" fill="#E2E8F0" font-size="14">🇨🇱 Español (Chile)</text>
+  <text x="808" y="471" text-anchor="end" fill="#818CF8" font-size="12">▼</text>
+
+  <!-- Save button area -->
+  <line x1="344" y1="582" x2="1216" y2="582" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="372" y="594" width="140" height="38" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="442" y="618" text-anchor="middle" fill="#64748B" font-size="13">Cancelar</text>
+  <rect x="1050" y="594" width="138" height="38" rx="10" fill="url(#indigo)"/>
+  <text x="1119" y="618" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Guardar cambios</text>
+
+  <!-- Version info bottom -->
+  <text x="64" y="660" fill="#334155" font-size="11">FlowTime v0.1.0 · Desarrollado con Next.js 15 + Neon Postgres</text>
+
+  <!-- ══ FLOATING PILL NAV ══ -->
+  <ellipse cx="640" cy="768" rx="280" ry="20" fill="rgba(79,70,229,0.25)" filter="url(#pillGlow)"/>
+  <rect x="316" y="740" width="648" height="58" rx="29" fill="rgba(0,0,0,0.5)" filter="url(#softShadow)"/>
+  <rect x="320" y="736" width="640" height="56" rx="28" fill="url(#navPill)" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <rect x="321" y="737" width="638" height="28" rx="28" fill="rgba(255,255,255,0.03)"/>
+
+  <text x="377" y="762" text-anchor="middle" font-size="16">📊</text>
+  <text x="377" y="778" text-anchor="middle" fill="#475569" font-size="9">Inicio</text>
+  <text x="480" y="762" text-anchor="middle" font-size="16">✅</text>
+  <text x="480" y="778" text-anchor="middle" fill="#475569" font-size="9">Tareas</text>
+  <circle cx="640" cy="764" r="26" fill="rgba(79,70,229,0.2)" filter="url(#pillGlow)"/>
+  <circle cx="640" cy="764" r="24" fill="url(#indigo)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <text x="640" y="771" text-anchor="middle" fill="#fff" font-size="22" font-weight="300">+</text>
+  <text x="800" y="762" text-anchor="middle" font-size="16">📅</text>
+  <text x="800" y="778" text-anchor="middle" fill="#475569" font-size="9">Calendario</text>
+  <text x="880" y="762" text-anchor="middle" font-size="16">📈</text>
+  <text x="880" y="778" text-anchor="middle" fill="#475569" font-size="9">Historial</text>
+  <!-- Config active -->
+  <rect x="914" y="740" width="68" height="48" rx="18" fill="rgba(79,70,229,0.28)" stroke="rgba(79,70,229,0.5)" stroke-width="1"/>
+  <text x="948" y="762" text-anchor="middle" font-size="16">⚙️</text>
+  <text x="948" y="778" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">Config</text>
+
+  <text x="640" y="796" text-anchor="middle" fill="#1E293B" font-size="10">FlowTime — Configuración (Desktop) v1.0 · 2026</text>
+</svg>

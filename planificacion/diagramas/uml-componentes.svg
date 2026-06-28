@@ -19,13 +19,16 @@
   <rect x="20" y="76" width="280" height="440" rx="14" fill="rgba(79,70,229,0.05)" stroke="rgba(79,70,229,0.3)" stroke-width="1.5" stroke-dasharray="6,3"/>
   <text x="36" y="96" fill="#818CF8" font-size="10" font-weight="700" letter-spacing="1">«package» FRONTEND (Next.js App Router)</text>
 
-  <!-- Component: BottomNav -->
-  <rect x="36" y="106" width="180" height="44" rx="8" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
-  <rect x="188" y="118" width="10" height="20" rx="2" fill="rgba(79,70,229,0.4)" stroke="#4F46E5" stroke-width="1"/>
+  <!-- Component: ResponsiveLayout -->
+  <rect x="36" y="106" width="180" height="58" rx="8" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <rect x="188" y="118" width="10" height="34" rx="2" fill="rgba(79,70,229,0.4)" stroke="#4F46E5" stroke-width="1"/>
   <rect x="191" y="121" width="4" height="6" rx="1" fill="rgba(79,70,229,0.6)"/>
   <rect x="191" y="130" width="4" height="6" rx="1" fill="rgba(79,70,229,0.6)"/>
-  <text x="48" y="132" fill="#818CF8" font-size="11" font-weight="700">«component»</text>
-  <text x="48" y="144" fill="#E2E8F0" font-size="11">BottomNav</text>
+  <rect x="191" y="139" width="4" height="6" rx="1" fill="rgba(79,70,229,0.6)"/>
+  <text x="48" y="128" fill="#818CF8" font-size="11" font-weight="700">«component»</text>
+  <text x="48" y="142" fill="#E2E8F0" font-size="11">FloatingPillNav</text>
+  <text x="48" y="155" fill="#64748B" font-size="9">Mobile: 4 tabs + FAB</text>
+  <text x="48" y="165" fill="#64748B" font-size="9">Desktop: 5 tabs + FAB (pill centrado)</text>
 
   <!-- Component: Dashboard Page -->
   <rect x="36" y="162" width="180" height="44" rx="8" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>

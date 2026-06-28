@@ -13,7 +13,7 @@ App organizativa personal: Tareas + Calendario + Recordatorios + Bot Telegram
 - [x] Variables de entorno definidas (.env.example)
 
 ## Fase 2 — Desarrollo Core (en curso)
-- [ ] Layout base con glassmorphism 3D + bottom nav
+- [ ] Layout base responsivo: bottom nav mobile (4 tabs + FAB) + sidebar desktop, glassmorphism 3D
 - [ ] NextAuth v5 — autenticación (Google OAuth + credenciales)
 - [ ] Conexión Neon Postgres + migraciones Prisma
 - [ ] Módulo Tareas — CRUD completo (prioridades, etiquetas, filtros)

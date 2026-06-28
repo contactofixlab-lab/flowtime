@@ -136,15 +136,17 @@ Event ──< Reminder   (1 evento puede tener N recordatorios)
 
 ## Índices importantes (performance)
 
-```sql
--- Tareas del usuario ordenadas por fecha de vencimiento
-CREATE INDEX ON tasks(user_id, due_date);
+Los índices se definen en el schema de Prisma con `@@index()`:
 
--- Recordatorios pendientes de enviar
-CREATE INDEX ON reminders(scheduled_at, sent);
+```prisma
+// En el modelo Task
+@@index([userId, dueDate])
 
--- Telegram ID para lookup rápido del bot
-CREATE UNIQUE INDEX ON users(telegram_id);
+// En el modelo Reminder
+@@index([scheduledAt, sent])
+
+// En el modelo User — ya cubierto por:
+telegramId String? @unique  // genera índice único automáticamente
 ```
 
 ---

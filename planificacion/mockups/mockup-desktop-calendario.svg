@@ -1,0 +1,185 @@
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/>
+      <stop offset="55%" style="stop-color:#0D0D26"/>
+      <stop offset="100%" style="stop-color:#120A2E"/>
+    </linearGradient>
+    <linearGradient id="indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="navPill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(20,20,48,0.92)"/>
+      <stop offset="100%" style="stop-color:rgba(10,10,28,0.96)"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="45"/></filter>
+    <filter id="pillGlow"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="softShadow"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+
+  <!-- Browser chrome -->
+  <rect width="1280" height="800" fill="#12121f" rx="12"/>
+  <rect x="0" y="0" width="1280" height="34" fill="#0c0c1a" rx="12"/>
+  <rect x="0" y="22" width="1280" height="12" fill="#0c0c1a"/>
+  <circle cx="14" cy="17" r="5" fill="#F43F5E" opacity="0.7"/>
+  <circle cx="30" cy="17" r="5" fill="#F59E0B" opacity="0.7"/>
+  <circle cx="46" cy="17" r="5" fill="#10B981" opacity="0.7"/>
+  <rect x="360" y="6" width="560" height="20" rx="10" fill="rgba(255,255,255,0.05)"/>
+  <text x="640" y="20" text-anchor="middle" fill="#334155" font-size="10">flowtime.app/calendar</text>
+
+  <!-- App bg -->
+  <rect x="0" y="34" width="1280" height="766" fill="url(#bg)"/>
+  <circle cx="640" cy="400" r="260" fill="rgba(14,165,233,0.07)" filter="url(#glow)"/>
+  <circle cx="1100" cy="180" r="180" fill="rgba(79,70,229,0.08)" filter="url(#glow)"/>
+
+  <!-- ══ TOP BAR ══ -->
+  <rect x="0" y="34" width="1280" height="60" fill="rgba(8,8,22,0.7)"/>
+  <rect x="0" y="93" width="1280" height="1" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="44" cy="64" r="16" fill="url(#indigo)"/>
+  <text x="44" y="70" text-anchor="middle" fill="#fff" font-size="13" font-weight="800">F</text>
+  <text x="70" y="68" fill="#E2E8F0" font-size="16" font-weight="800">FlowTime</text>
+  <rect x="440" y="46" width="400" height="34" rx="17" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="468" y="67" fill="#475569" font-size="13">🔍</text>
+  <text x="490" y="67" fill="#334155" font-size="12">Buscar eventos...</text>
+  <rect x="1148" y="48" width="84" height="32" rx="10" fill="url(#indigo)"/>
+  <text x="1190" y="69" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">+ Evento</text>
+  <circle cx="1264" cy="64" r="18" fill="url(#indigo)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="1264" y="69" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">V</text>
+
+  <!-- ══ CALENDAR HEADER ══ -->
+  <text x="64" y="136" fill="#E2E8F0" font-size="28" font-weight="800">Calendario</text>
+
+  <!-- Month nav -->
+  <text x="580" y="136" fill="#818CF8" font-size="22">‹</text>
+  <text x="640" y="136" text-anchor="middle" fill="#E2E8F0" font-size="18" font-weight="700">Junio 2026</text>
+  <text x="700" y="136" fill="#818CF8" font-size="22">›</text>
+
+  <!-- View toggle -->
+  <rect x="800" y="112" width="184" height="32" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="802" y="114" width="88" height="28" rx="14" fill="url(#indigo)"/>
+  <text x="846" y="132" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Mes</text>
+  <text x="940" y="132" text-anchor="middle" fill="#475569" font-size="11">Semana</text>
+
+  <line x1="64" y1="150" x2="1216" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- ══ CALENDAR GRID ══ -->
+
+  <!-- Day headers -->
+  <rect x="64" y="158" width="1152" height="32" fill="rgba(255,255,255,0.025)" rx="8"/>
+  <text x="228"  y="178" text-anchor="middle" fill="#64748B" font-size="11" font-weight="600">LUNES</text>
+  <text x="393"  y="178" text-anchor="middle" fill="#64748B" font-size="11" font-weight="600">MARTES</text>
+  <text x="558"  y="178" text-anchor="middle" fill="#64748B" font-size="11" font-weight="600">MIÉRCOLES</text>
+  <text x="723"  y="178" text-anchor="middle" fill="#64748B" font-size="11" font-weight="600">JUEVES</text>
+  <text x="888"  y="178" text-anchor="middle" fill="#64748B" font-size="11" font-weight="600">VIERNES</text>
+  <text x="1053" y="178" text-anchor="middle" fill="#475569" font-size="11" font-weight="600">SÁBADO</text>
+  <text x="1189" y="178" text-anchor="middle" fill="#475569" font-size="11" font-weight="600">DOMINGO</text>
+
+  <!-- Grid verticals -->
+  <line x1="64"   y1="158" x2="64"   y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="311"  y1="158" x2="311"  y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="476"  y1="158" x2="476"  y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="641"  y1="158" x2="641"  y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="806"  y1="158" x2="806"  y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="971"  y1="158" x2="971"  y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="1136" y1="158" x2="1136" y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="1216" y1="158" x2="1216" y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Grid horizontals (5 rows) -->
+  <line x1="64" y1="190" x2="1216" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="64" y1="300" x2="1216" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="64" y1="410" x2="1216" y2="410" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="64" y1="520" x2="1216" y2="520" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="64" y1="630" x2="1216" y2="630" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="64" y1="720" x2="1216" y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- ── WEEK 1: 1-7 Jun ── -->
+  <text x="304"  y="208" text-anchor="end" fill="#64748B" font-size="12">1</text>
+  <text x="469"  y="208" text-anchor="end" fill="#64748B" font-size="12">2</text>
+  <text x="634"  y="208" text-anchor="end" fill="#64748B" font-size="12">3</text>
+  <text x="799"  y="208" text-anchor="end" fill="#64748B" font-size="12">4</text>
+  <text x="964"  y="208" text-anchor="end" fill="#64748B" font-size="12">5</text>
+  <text x="1129" y="208" text-anchor="end" fill="#475569" font-size="12">6</text>
+  <text x="1210" y="208" text-anchor="end" fill="#475569" font-size="12">7</text>
+  <rect x="68" y="212" width="238" height="20" rx="5" fill="rgba(79,70,229,0.28)" stroke="#4F46E5" stroke-width="0.5"/>
+  <text x="78" y="226" fill="#818CF8" font-size="10">Reunión partners</text>
+
+  <!-- ── WEEK 2: 8-14 ── -->
+  <text x="304"  y="318" text-anchor="end" fill="#64748B" font-size="12">8</text>
+  <text x="469"  y="318" text-anchor="end" fill="#64748B" font-size="12">9</text>
+  <text x="634"  y="318" text-anchor="end" fill="#64748B" font-size="12">10</text>
+  <text x="799"  y="318" text-anchor="end" fill="#64748B" font-size="12">11</text>
+  <text x="964"  y="318" text-anchor="end" fill="#64748B" font-size="12">12</text>
+  <text x="1129" y="318" text-anchor="end" fill="#475569" font-size="12">13</text>
+  <text x="1210" y="318" text-anchor="end" fill="#475569" font-size="12">14</text>
+  <rect x="478" y="322" width="238" height="20" rx="5" fill="rgba(244,63,94,0.22)" stroke="#F43F5E" stroke-width="0.5"/>
+  <text x="488" y="336" fill="#FB7185" font-size="10">Entrega informe mensual</text>
+
+  <!-- ── WEEK 3: 15-21 ── -->
+  <text x="304"  y="428" text-anchor="end" fill="#64748B" font-size="12">15</text>
+  <text x="469"  y="428" text-anchor="end" fill="#64748B" font-size="12">16</text>
+  <text x="634"  y="428" text-anchor="end" fill="#64748B" font-size="12">17</text>
+  <text x="799"  y="428" text-anchor="end" fill="#64748B" font-size="12">18</text>
+  <text x="964"  y="428" text-anchor="end" fill="#64748B" font-size="12">19</text>
+  <text x="1129" y="428" text-anchor="end" fill="#475569" font-size="12">20</text>
+  <text x="1210" y="428" text-anchor="end" fill="#475569" font-size="12">21</text>
+  <rect x="68" y="432" width="568" height="20" rx="5" fill="rgba(16,185,129,0.18)" stroke="#10B981" stroke-width="0.5"/>
+  <text x="78" y="446" fill="#34D399" font-size="10">Semana de capacitación interna</text>
+
+  <!-- ── WEEK 4: 22-28 ── -->
+  <text x="304"  y="538" text-anchor="end" fill="#64748B" font-size="12">22</text>
+  <text x="469"  y="538" text-anchor="end" fill="#64748B" font-size="12">23</text>
+  <text x="634"  y="538" text-anchor="end" fill="#64748B" font-size="12">24</text>
+  <text x="799"  y="538" text-anchor="end" fill="#64748B" font-size="12">25</text>
+  <text x="964"  y="538" text-anchor="end" fill="#64748B" font-size="12">26</text>
+  <text x="1129" y="538" text-anchor="end" fill="#475569" font-size="12">27</text>
+  <text x="1210" y="538" text-anchor="end" fill="#475569" font-size="12">28</text>
+  <rect x="313" y="542" width="238" height="20" rx="5" fill="rgba(245,158,11,0.2)" stroke="#F59E0B" stroke-width="0.5"/>
+  <text x="323" y="556" fill="#FBBF24" font-size="10">Revisión contratos trim.</text>
+
+  <!-- ── WEEK 5: 29-30 — TODAY ── -->
+  <rect x="64" y="630" width="247" height="90" fill="rgba(79,70,229,0.06)" rx="4"/>
+  <circle cx="86" cy="650" r="15" fill="url(#indigo)"/>
+  <text x="86" y="655" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">29</text>
+  <text x="469" y="648" text-anchor="end" fill="#64748B" font-size="12">30</text>
+
+  <!-- Today's events in cell -->
+  <rect x="68" y="670" width="238" height="18" rx="5" fill="rgba(79,70,229,0.28)" stroke="#4F46E5" stroke-width="0.5"/>
+  <text x="78" y="683" fill="#818CF8" font-size="10">14:00 Reunión equipo 👥</text>
+  <rect x="68" y="692" width="238" height="18" rx="5" fill="rgba(14,165,233,0.22)" stroke="#0EA5E9" stroke-width="0.5"/>
+  <text x="78" y="705" fill="#38BDF8" font-size="10">17:00 Review mensual 📊</text>
+
+  <!-- ══ FLOATING PILL NAV ══ -->
+  <ellipse cx="640" cy="768" rx="280" ry="20" fill="rgba(79,70,229,0.25)" filter="url(#pillGlow)"/>
+  <rect x="316" y="740" width="648" height="58" rx="29" fill="rgba(0,0,0,0.5)" filter="url(#softShadow)"/>
+  <rect x="320" y="736" width="640" height="56" rx="28" fill="url(#navPill)" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <rect x="321" y="737" width="638" height="28" rx="28" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- Dashboard -->
+  <text x="377" y="762" text-anchor="middle" font-size="16">📊</text>
+  <text x="377" y="778" text-anchor="middle" fill="#475569" font-size="9">Inicio</text>
+
+  <!-- Tareas -->
+  <text x="480" y="762" text-anchor="middle" font-size="16">✅</text>
+  <text x="480" y="778" text-anchor="middle" fill="#475569" font-size="9">Tareas</text>
+
+  <!-- FAB -->
+  <circle cx="640" cy="764" r="26" fill="rgba(79,70,229,0.2)" filter="url(#pillGlow)"/>
+  <circle cx="640" cy="764" r="24" fill="url(#indigo)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <text x="640" y="771" text-anchor="middle" fill="#fff" font-size="22" font-weight="300">+</text>
+
+  <!-- Calendario (active) -->
+  <rect x="746" y="740" width="108" height="48" rx="18" fill="rgba(79,70,229,0.28)" stroke="rgba(79,70,229,0.5)" stroke-width="1"/>
+  <text x="800" y="762" text-anchor="middle" font-size="16">📅</text>
+  <text x="800" y="778" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">Calendario</text>
+
+  <!-- Historial -->
+  <text x="880" y="762" text-anchor="middle" font-size="16">📈</text>
+  <text x="880" y="778" text-anchor="middle" fill="#475569" font-size="9">Historial</text>
+
+  <!-- Config -->
+  <text x="948" y="762" text-anchor="middle" font-size="16">⚙️</text>
+  <text x="948" y="778" text-anchor="middle" fill="#475569" font-size="9">Config</text>
+
+  <text x="640" y="796" text-anchor="middle" fill="#1E293B" font-size="10">FlowTime — Calendario (Desktop) v1.1 · 2026</text>
+</svg>

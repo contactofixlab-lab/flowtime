@@ -33,17 +33,30 @@
 | [diagramas/uml-componentes.svg](./diagramas/uml-componentes.svg) | Componentes: frontend, API layer, servicios externos |
 | [diagramas/uml-despliegue.svg](./diagramas/uml-despliegue.svg) | Despliegue: Vercel, Neon, Telegram API, OpenAI |
 
-## Mockups de diseño
+## Mockups de diseño — Mobile
 
 | Mockup | Descripción |
 |--------|-------------|
-| [mockups/mockup-dashboard.svg](./mockups/mockup-dashboard.svg) | Pantalla principal con métricas y tareas del día |
-| [mockups/mockup-tareas.svg](./mockups/mockup-tareas.svg) | Lista de tareas con filtros y prioridades |
-| [mockups/mockup-calendario.svg](./mockups/mockup-calendario.svg) | Vista de calendario mensual con eventos |
-| [mockups/mockup-nueva-tarea.svg](./mockups/mockup-nueva-tarea.svg) | Modal de creación de tarea (bottom sheet) |
-| [mockups/mockup-bot-telegram.svg](./mockups/mockup-bot-telegram.svg) | Conversación con el bot (texto y voz) |
+| [mockups/mockup-dashboard.svg](./mockups/mockup-dashboard.svg) | Dashboard móvil: métricas, actividad, tareas del día |
+| [mockups/mockup-tareas.svg](./mockups/mockup-tareas.svg) | Lista de tareas móvil: filtros, prioridades, estados |
+| [mockups/mockup-calendario.svg](./mockups/mockup-calendario.svg) | Calendario móvil: grid mensual + detalle del día |
+| [mockups/mockup-nueva-tarea.svg](./mockups/mockup-nueva-tarea.svg) | Modal de creación de tarea (bottom sheet móvil) |
+| [mockups/mockup-bot-telegram.svg](./mockups/mockup-bot-telegram.svg) | Conversación con el bot de Telegram (texto y voz) |
+| [mockups/mockup-historial.svg](./mockups/mockup-historial.svg) | Historial móvil: stats de racha, gráficos, lista de completadas |
+| [mockups/mockup-configuracion.svg](./mockups/mockup-configuracion.svg) | Configuración móvil: perfil, Telegram, notificaciones, etiquetas |
+
+## Mockups de diseño — Desktop
+
+| Mockup | Descripción |
+|--------|-------------|
+| [mockups/mockup-desktop-dashboard.svg](./mockups/mockup-desktop-dashboard.svg) | Dashboard desktop: top bar + 2 columnas, mini-calendario, pill nav |
+| [mockups/mockup-desktop-tareas.svg](./mockups/mockup-desktop-tareas.svg) | Tareas desktop: 3 columnas por prioridad, pill nav |
+| [mockups/mockup-desktop-calendario.svg](./mockups/mockup-desktop-calendario.svg) | Calendario desktop: grid mensual completo con eventos, pill nav |
+| [mockups/mockup-desktop-historial.svg](./mockups/mockup-desktop-historial.svg) | Historial desktop: stats, gráfico evolución, barras por prioridad, tabla |
+| [mockups/mockup-desktop-configuracion.svg](./mockups/mockup-desktop-configuracion.svg) | Configuración desktop: 2 columnas (menú + panel), pill nav |
+| [mockups/mockup-desktop-nueva-tarea.svg](./mockups/mockup-desktop-nueva-tarea.svg) | Nueva tarea desktop: modal centrado con backdrop overlay, pill nav |
 
 ---
 
 **Última actualización:** 2026-06-28
-**Versión del plan:** 1.1
+**Versión del plan:** 1.3

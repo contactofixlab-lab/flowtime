@@ -1,8 +1,10 @@
 # 05 — Bot de Telegram
 
 **Library:** Grammy  
-**Webhook URL:** `https://flowtime.vercel.app/api/telegram/webhook`  
+**Webhook URL:** `https://<tu-proyecto>.vercel.app/api/telegram/webhook` _(definir tras el deploy a Vercel)_  
 **Nombre del bot:** @FlowTimeBot (a definir al crear con @BotFather)
+
+> **Nota de uso:** El bot de Telegram es el canal **exclusivo para móvil**. La app web es responsiva y funciona en computador y celular. Ambos canales comparten la misma base de datos.
 
 ---
 
@@ -154,6 +156,6 @@ export async function POST(req: Request) {
 3. Guardar el token en `.env` → `TELEGRAM_BOT_TOKEN`
 4. Después del deploy a Vercel, registrar el webhook:
 ```bash
-curl "https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://flowtime.vercel.app/api/telegram/webhook&secret_token=<WEBHOOK_SECRET>"
+curl "https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://<tu-proyecto>.vercel.app/api/telegram/webhook&secret_token=<WEBHOOK_SECRET>"
 ```
 5. Verificar: `https://api.telegram.org/bot<TOKEN>/getWebhookInfo`

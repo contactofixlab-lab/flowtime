@@ -1,0 +1,154 @@
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/>
+      <stop offset="55%" style="stop-color:#0D0D26"/>
+      <stop offset="100%" style="stop-color:#120A2E"/>
+    </linearGradient>
+    <linearGradient id="indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="modal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#141428"/>
+      <stop offset="100%" style="stop-color:#0F0F22"/>
+    </linearGradient>
+    <linearGradient id="navPill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(20,20,48,0.92)"/>
+      <stop offset="100%" style="stop-color:rgba(10,10,28,0.96)"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="45"/></filter>
+    <filter id="pillGlow"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="softShadow"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="modalShadow"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+
+  <!-- Browser chrome -->
+  <rect width="1280" height="800" fill="#12121f" rx="12"/>
+  <rect x="0" y="0" width="1280" height="34" fill="#0c0c1a" rx="12"/>
+  <rect x="0" y="22" width="1280" height="12" fill="#0c0c1a"/>
+  <circle cx="14" cy="17" r="5" fill="#F43F5E" opacity="0.7"/>
+  <circle cx="30" cy="17" r="5" fill="#F59E0B" opacity="0.7"/>
+  <circle cx="46" cy="17" r="5" fill="#10B981" opacity="0.7"/>
+  <rect x="360" y="6" width="560" height="20" rx="10" fill="rgba(255,255,255,0.05)"/>
+  <text x="640" y="20" text-anchor="middle" fill="#334155" font-size="10">flowtime.app/tasks</text>
+
+  <!-- App bg (blurred behind modal) -->
+  <rect x="0" y="34" width="1280" height="766" fill="url(#bg)"/>
+  <circle cx="300"  cy="300" r="200" fill="rgba(79,70,229,0.10)" filter="url(#glow)"/>
+  <circle cx="1000" cy="500" r="180" fill="rgba(14,165,233,0.07)" filter="url(#glow)"/>
+
+  <!-- Top bar (dimmed) -->
+  <rect x="0" y="34" width="1280" height="60" fill="rgba(8,8,22,0.7)"/>
+  <rect x="0" y="93" width="1280" height="1" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="44" cy="64" r="16" fill="url(#indigo)" opacity="0.5"/>
+  <text x="44" y="70" text-anchor="middle" fill="#fff" font-size="13" font-weight="800" opacity="0.5">F</text>
+  <text x="70" y="68" fill="#64748B" font-size="16" font-weight="800">FlowTime</text>
+
+  <!-- Overlay -->
+  <rect x="0" y="34" width="1280" height="766" fill="rgba(0,0,0,0.62)"/>
+
+  <!-- ══ MODAL CENTERED ══ -->
+  <!-- Shadow -->
+  <rect x="316" y="96" width="648" height="594" rx="24" fill="rgba(0,0,0,0.6)" filter="url(#modalShadow)"/>
+
+  <!-- Modal body -->
+  <rect x="320" y="92" width="640" height="590" rx="22" fill="url(#modal)" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+  <!-- Top glow line -->
+  <rect x="320" y="92" width="640" height="1" rx="1" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Modal header -->
+  <text x="360" y="136" fill="#E2E8F0" font-size="22" font-weight="800">Nueva Tarea</text>
+  <rect x="912" y="110" width="32" height="32" rx="10" fill="rgba(255,255,255,0.06)"/>
+  <text x="928" y="131" text-anchor="middle" fill="#64748B" font-size="16">✕</text>
+
+  <line x1="320" y1="152" x2="960" y2="152" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- ── FORM (2-column layout) ── -->
+
+  <!-- LEFT COLUMN -->
+
+  <!-- Título -->
+  <text x="360" y="182" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">TÍTULO *</text>
+  <rect x="360" y="190" width="560" height="44" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(79,70,229,0.5)" stroke-width="1.5"/>
+  <text x="380" y="217" fill="#E2E8F0" font-size="14">Llamar al banco</text>
+  <!-- Cursor -->
+  <rect x="470" y="202" width="1.5" height="20" fill="#4F46E5"/>
+
+  <!-- Descripción -->
+  <text x="360" y="254" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">DESCRIPCIÓN</text>
+  <rect x="360" y="262" width="560" height="72" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="380" y="286" fill="#475569" font-size="12">Llamar para verificar transferencia pendiente...</text>
+
+  <!-- Prioridad + Estado (2 cols) -->
+  <text x="360" y="356" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">PRIORIDAD *</text>
+  <text x="640" y="356" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">ESTADO</text>
+
+  <!-- Priority pills -->
+  <rect x="360" y="364" width="60" height="32" rx="10" fill="rgba(100,116,139,0.15)" stroke="rgba(100,116,139,0.2)" stroke-width="1"/>
+  <text x="390" y="385" text-anchor="middle" fill="#64748B" font-size="11">Baja</text>
+  <rect x="428" y="364" width="60" height="32" rx="10" fill="rgba(79,70,229,0.15)" stroke="rgba(79,70,229,0.3)" stroke-width="1"/>
+  <text x="458" y="385" text-anchor="middle" fill="#818CF8" font-size="11">Media</text>
+  <rect x="496" y="364" width="60" height="32" rx="10" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+  <text x="526" y="385" text-anchor="middle" fill="#FBBF24" font-size="11">Alta</text>
+  <rect x="564" y="364" width="68" height="32" rx="10" fill="rgba(244,63,94,0.3)" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="598" y="385" text-anchor="middle" fill="#FB7185" font-size="11" font-weight="700">Urgente ✓</text>
+
+  <!-- Estado select -->
+  <rect x="640" y="364" width="280" height="32" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="660" y="385" fill="#E2E8F0" font-size="12">⏳ Pendiente</text>
+  <text x="912" y="385" text-anchor="end" fill="#475569" font-size="12">▼</text>
+
+  <!-- Fecha límite + hora (2 cols) -->
+  <text x="360" y="422" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">FECHA LÍMITE</text>
+  <text x="640" y="422" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">HORA</text>
+
+  <rect x="360" y="430" width="265" height="36" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="380" y="453" fill="#E2E8F0" font-size="13">📅  29 junio 2026</text>
+
+  <rect x="640" y="430" width="120" height="36" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="660" y="453" fill="#E2E8F0" font-size="13">🕙  10:00</text>
+
+  <!-- Etiquetas -->
+  <text x="360" y="490" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">ETIQUETAS</text>
+  <rect x="360" y="498" width="560" height="36" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Selected tags -->
+  <rect x="370" y="506" width="58" height="20" rx="10" fill="rgba(245,158,11,0.2)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+  <text x="399" y="520" text-anchor="middle" fill="#FBBF24" font-size="10">finanzas ✕</text>
+  <text x="444" y="520" fill="#334155" font-size="12">+ agregar...</text>
+
+  <!-- Recordatorio -->
+  <text x="360" y="558" fill="#94A3B8" font-size="11" font-weight="600" letter-spacing="0.5">RECORDATORIO</text>
+
+  <rect x="360" y="566" width="560" height="52" rx="12" fill="rgba(79,70,229,0.08)" stroke="rgba(79,70,229,0.22)" stroke-width="1"/>
+  <text x="380" y="588" fill="#E2E8F0" font-size="13">⏰ Recordar antes de vencer</text>
+  <!-- Toggle ON -->
+  <rect x="856" y="578" width="40" height="22" rx="11" fill="#4F46E5"/>
+  <circle cx="885" cy="589" r="9" fill="#fff"/>
+  <text x="380" y="608" fill="#64748B" font-size="11">30 minutos antes · por Telegram</text>
+
+  <!-- ── FOOTER BUTTONS ── -->
+  <line x1="320" y1="634" x2="960" y2="634" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <rect x="360" y="648" width="140" height="42" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="430" y="674" text-anchor="middle" fill="#64748B" font-size="13">Cancelar</text>
+
+  <rect x="780" y="648" width="140" height="42" rx="12" fill="url(#indigo)"/>
+  <text x="850" y="674" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Crear tarea</text>
+
+  <!-- Quick shortcut hint -->
+  <text x="640" y="674" text-anchor="middle" fill="#334155" font-size="10">⌘↵ para guardar</text>
+
+  <!-- ══ FLOATING PILL NAV (dimmed behind overlay) ══ -->
+  <ellipse cx="640" cy="768" rx="280" ry="20" fill="rgba(79,70,229,0.15)" filter="url(#pillGlow)" opacity="0.5"/>
+  <rect x="320" y="736" width="640" height="56" rx="28" fill="url(#navPill)" stroke="rgba(255,255,255,0.06)" stroke-width="1" opacity="0.5"/>
+  <text x="377" y="762" text-anchor="middle" font-size="16" opacity="0.4">📊</text>
+  <text x="480" y="762" text-anchor="middle" font-size="16" opacity="0.4">✅</text>
+  <circle cx="640" cy="764" r="24" fill="url(#indigo)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" opacity="0.7"/>
+  <text x="640" y="771" text-anchor="middle" fill="#fff" font-size="22" font-weight="300" opacity="0.7">+</text>
+  <text x="800" y="762" text-anchor="middle" font-size="16" opacity="0.4">📅</text>
+  <text x="880" y="762" text-anchor="middle" font-size="16" opacity="0.4">📈</text>
+  <text x="948" y="762" text-anchor="middle" font-size="16" opacity="0.4">⚙️</text>
+
+  <text x="640" y="796" text-anchor="middle" fill="#1E293B" font-size="10">FlowTime — Nueva Tarea Modal (Desktop) v1.0 · 2026</text>
+</svg>

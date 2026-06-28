@@ -73,7 +73,9 @@ En `vercel.json` se configura el cron de recordatorios:
 }
 ```
 
-`* * * * *` = cada minuto. En el free tier de Vercel, el mínimo es cada minuto pero solo se ejecuta si hay tráfico reciente. Para producción personal es suficiente.
+`* * * * *` = cada minuto. En el plan Hobby de Vercel, los cron jobs se ejecutan según el schedule sin importar el tráfico. El límite es 2 crons activos.
+
+> **Pendiente:** El archivo `vercel.json` debe crearse en la raíz del proyecto antes del primer deploy. Ver Fase 4 del PLAN.md.
 
 ---
 

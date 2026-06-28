@@ -2,11 +2,25 @@
 
 ## Navegación
 
-La app tiene un **bottom navigation bar** estilo glassmorphism con 5 módulos principales, visible siempre en la parte inferior. En desktop puede ser un sidebar izquierdo colapsable.
+La app tiene **el mismo patrón de navegación en ambos dispositivos:** un **pill/burbuja flotante glassmorphism centrado en la parte inferior** de la pantalla.
+
+**Mobile (< 768px):** Pill ancho completo con 4 tabs + FAB central (+).
 
 ```
-[ Dashboard ] [ Tareas ] [ Calendario ] [ Historial ] [ Config ]
+[ Dashboard ] [ Tareas ] [ + ] [ Calendario ] [ Config ]
 ```
+
+**Desktop (≥ 768px):** Pill más compacto, centrado horizontalmente, con 5 tabs + FAB central. Caben todos los módulos por el mayor ancho disponible.
+
+```
+[ Inicio ] [ Tareas ] [ + ] [ Calendario ] [ Historial ] [ Config ]
+```
+
+El pill flota sobre el contenido con `backdrop-filter: blur`, borde sutil y glow indigo debajo. El FAB central siempre abre el modal de creación rápida de tarea.
+
+El diseño es **completamente responsivo**: misma estética en computador y celular. El bot de Telegram es el canal exclusivo del celular (complementa la app web, no la reemplaza).
+
+En mobile, Historial se accede desde el Dashboard (link "Ver historial"). En desktop cabe directamente en el pill.
 
 ---
 
