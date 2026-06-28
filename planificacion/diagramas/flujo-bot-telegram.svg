@@ -1,0 +1,163 @@
+<svg viewBox="0 0 960 740" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/>
+      <stop offset="100%" style="stop-color:#0F0F2E"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrT" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0EA5E9"/>
+    </marker>
+    <marker id="arrR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F43F5E"/>
+    </marker>
+    <marker id="arrY" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="740" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="480" y="38" text-anchor="middle" fill="#38BDF8" font-size="11" font-weight="700" letter-spacing="2">DIAGRAMA DE FLUJO</text>
+  <text x="480" y="60" text-anchor="middle" fill="#E2E8F0" font-size="20" font-weight="800">Bot de Telegram — FlowTime</text>
+
+  <!-- ==================== FLUJO PRINCIPAL ==================== -->
+
+  <!-- Usuario envía mensaje -->
+  <rect x="360" y="80" width="240" height="52" rx="26" fill="rgba(14,165,233,0.2)" stroke="#0EA5E9" stroke-width="2"/>
+  <text x="480" y="101" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="700">📱 Usuario envía mensaje</text>
+  <text x="480" y="119" text-anchor="middle" fill="#94A3B8" font-size="10">en Telegram</text>
+
+  <line x1="480" y1="132" x2="480" y2="158" stroke="#0EA5E9" stroke-width="1.5" marker-end="url(#arrT)"/>
+
+  <!-- Webhook -->
+  <rect x="370" y="160" width="220" height="48" rx="10" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="480" y="182" text-anchor="middle" fill="#818CF8" font-size="11" font-weight="700">Webhook recibe el update</text>
+  <text x="480" y="198" text-anchor="middle" fill="#94A3B8" font-size="9">/api/telegram/webhook (Next.js)</text>
+
+  <line x1="480" y1="208" x2="480" y2="234" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Decisión: tipo de mensaje -->
+  <polygon points="480,238 560,268 480,298 400,268" fill="rgba(244,63,94,0.12)" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="480" y="264" text-anchor="middle" fill="#FB7185" font-size="9" font-weight="700">¿Tipo de</text>
+  <text x="480" y="276" text-anchor="middle" fill="#FB7185" font-size="9" font-weight="700">mensaje?</text>
+
+  <!-- Branch TEXTO -->
+  <line x1="400" y1="268" x2="200" y2="268" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="295" y="260" text-anchor="middle" fill="#818CF8" font-size="9">Texto / Comando</text>
+
+  <!-- Branch VOZ -->
+  <line x1="560" y1="268" x2="760" y2="268" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="655" y="260" text-anchor="middle" fill="#A78BFA" font-size="9">Mensaje de voz</text>
+
+  <!-- ==================== RAMA TEXTO ==================== -->
+  <rect x="80" y="290" width="240" height="52" rx="10" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="200" y="314" text-anchor="middle" fill="#818CF8" font-size="11" font-weight="700">Grammy parsea comando</text>
+  <text x="200" y="330" text-anchor="middle" fill="#94A3B8" font-size="9">Detecta /comando o texto libre</text>
+
+  <line x1="200" y1="342" x2="200" y2="368" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Decisión comando -->
+  <polygon points="200,372 264,400 200,428 136,400" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="200" y="396" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">¿Comando</text>
+  <text x="200" y="408" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">detectado?</text>
+
+  <!-- Comandos: ramas -->
+  <!-- /newtask -->
+  <line x1="136" y1="400" x2="40" y2="400" stroke="#10B981" stroke-width="1.5"/>
+  <line x1="40" y1="400" x2="40" y2="450" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrG)"/>
+  <rect x="0" y="452" width="80" height="44" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1"/>
+  <text x="40" y="472" text-anchor="middle" fill="#34D399" font-size="9" font-weight="700">/newtask</text>
+  <text x="40" y="486" text-anchor="middle" fill="#64748B" font-size="8">Crear tarea</text>
+
+  <!-- /list -->
+  <line x1="200" y1="428" x2="200" y2="452" stroke="#0EA5E9" stroke-width="1.5" marker-end="url(#arrT)"/>
+  <rect x="152" y="452" width="96" height="44" rx="8" fill="rgba(14,165,233,0.15)" stroke="#0EA5E9" stroke-width="1"/>
+  <text x="200" y="472" text-anchor="middle" fill="#38BDF8" font-size="9" font-weight="700">/list /today</text>
+  <text x="200" y="486" text-anchor="middle" fill="#64748B" font-size="8">Ver tareas</text>
+
+  <!-- /done -->
+  <line x1="264" y1="400" x2="310" y2="400" stroke="#F59E0B" stroke-width="1.5"/>
+  <line x1="310" y1="400" x2="310" y2="452" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrY)"/>
+  <rect x="266" y="452" width="88" height="44" rx="8" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="310" y="472" text-anchor="middle" fill="#FBBF24" font-size="9" font-weight="700">/done /remind</text>
+  <text x="310" y="486" text-anchor="middle" fill="#64748B" font-size="8">Completar / Recordar</text>
+
+  <!-- Todos bajan a DB -->
+  <line x1="40" y1="496" x2="40" y2="540" stroke="#10B981" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="200" y1="496" x2="200" y2="540" stroke="#0EA5E9" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="310" y1="496" x2="310" y2="540" stroke="#F59E0B" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="40" y1="540" x2="310" y2="540" stroke="#64748B" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="175" y1="540" x2="175" y2="560" stroke="#64748B" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+
+  <rect x="100" y="562" width="150" height="44" rx="10" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="175" y="582" text-anchor="middle" fill="#34D399" font-size="10" font-weight="700">🐘 Neon Postgres</text>
+  <text x="175" y="596" text-anchor="middle" fill="#94A3B8" font-size="9">Escribe / Lee datos</text>
+
+  <!-- ==================== RAMA VOZ ==================== -->
+  <rect x="640" y="290" width="240" height="52" rx="10" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="760" y="314" text-anchor="middle" fill="#A78BFA" font-size="11" font-weight="700">Descarga archivo .ogg</text>
+  <text x="760" y="330" text-anchor="middle" fill="#94A3B8" font-size="9">Servidores de Telegram</text>
+
+  <line x1="760" y1="342" x2="760" y2="368" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="640" y="370" width="240" height="52" rx="10" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="760" y="394" text-anchor="middle" fill="#A78BFA" font-size="11" font-weight="700">🎙️ OpenAI Whisper</text>
+  <text x="760" y="410" text-anchor="middle" fill="#94A3B8" font-size="9">Audio → texto en español</text>
+
+  <line x1="760" y1="422" x2="760" y2="448" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="640" y="450" width="240" height="52" rx="10" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="760" y="474" text-anchor="middle" fill="#818CF8" font-size="11" font-weight="700">Parsear intención</text>
+  <text x="760" y="490" text-anchor="middle" fill="#94A3B8" font-size="9">"crear tarea / recordarme / listar"</text>
+
+  <line x1="760" y1="502" x2="760" y2="528" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Ejecutar acción (voz) -->
+  <rect x="660" y="530" width="200" height="44" rx="10" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="760" y="550" text-anchor="middle" fill="#34D399" font-size="10" font-weight="700">Ejecutar acción</text>
+  <text x="760" y="564" text-anchor="middle" fill="#94A3B8" font-size="9">CRUD en Neon via Prisma</text>
+
+  <!-- ==================== RESPUESTA ==================== -->
+  <!-- Ambas ramas convergen en respuesta -->
+  <line x1="175" y1="606" x2="175" y2="636" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="175" y1="636" x2="480" y2="636" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="760" y1="574" x2="760" y2="636" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="760" y1="636" x2="480" y2="636" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="480" y1="636" x2="480" y2="656" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrG)"/>
+
+  <!-- Respuesta al usuario -->
+  <rect x="340" y="658" width="280" height="52" rx="26" fill="rgba(16,185,129,0.2)" stroke="#10B981" stroke-width="2"/>
+  <text x="480" y="679" text-anchor="middle" fill="#34D399" font-size="12" font-weight="700">✅ Bot responde al usuario</text>
+  <text x="480" y="697" text-anchor="middle" fill="#94A3B8" font-size="10">Confirmación + resumen de la acción</text>
+
+  <!-- ==================== FLUJO RECORDATORIO AUTOMÁTICO ==================== -->
+  <!-- Side panel -->
+  <rect x="820" y="80" width="120" height="220" rx="12" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.25)" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="880" y="102" text-anchor="middle" fill="#FBBF24" font-size="9" font-weight="700" letter-spacing="1">CRON</text>
+  <text x="880" y="116" text-anchor="middle" fill="#FBBF24" font-size="9" font-weight="700">AUTOMÁTICO</text>
+
+  <text x="880" y="140" text-anchor="middle" fill="#94A3B8" font-size="9">Cada minuto</text>
+  <text x="880" y="154" text-anchor="middle" fill="#94A3B8" font-size="9">Vercel Cron</text>
+
+  <line x1="880" y1="162" x2="880" y2="182" stroke="#F59E0B" stroke-width="1" marker-end="url(#arrY)"/>
+
+  <rect x="840" y="184" width="80" height="36" rx="8" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="880" y="200" text-anchor="middle" fill="#FBBF24" font-size="8" font-weight="700">Busca</text>
+  <text x="880" y="212" text-anchor="middle" fill="#FBBF24" font-size="8">recordatorios</text>
+
+  <line x1="880" y1="220" x2="880" y2="240" stroke="#F59E0B" stroke-width="1" marker-end="url(#arrY)"/>
+
+  <rect x="840" y="242" width="80" height="36" rx="8" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="880" y="258" text-anchor="middle" fill="#FBBF24" font-size="8" font-weight="700">Envía por</text>
+  <text x="880" y="270" text-anchor="middle" fill="#FBBF24" font-size="8">Telegram bot</text>
+
+  <!-- Footer -->
+  <text x="480" y="730" text-anchor="middle" fill="#334155" font-size="9">FlowTime — Flujo Bot Telegram v1.0 · Grammy + Whisper · 2026</text>
+</svg>

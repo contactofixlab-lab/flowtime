@@ -1,0 +1,168 @@
+<svg viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/>
+      <stop offset="100%" style="stop-color:#0F0F2E"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arrowG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrowT" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0EA5E9"/>
+    </marker>
+    <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F43F5E"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="720" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="500" y="38" text-anchor="middle" fill="#A78BFA" font-size="11" font-weight="700" letter-spacing="2">DIAGRAMA DE FLUJO</text>
+  <text x="500" y="60" text-anchor="middle" fill="#E2E8F0" font-size="20" font-weight="800">Flujo de Navegación del Usuario — App Web</text>
+
+  <!-- Legend -->
+  <rect x="740" y="76" width="220" height="110" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="850" y="96" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="700">LEYENDA</text>
+  <rect x="754" y="104" width="12" height="12" rx="3" fill="rgba(79,70,229,0.3)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="773" y="115" fill="#94A3B8" font-size="10">Pantalla / Módulo</text>
+  <rect x="754" y="122" width="12" height="12" rx="6" fill="rgba(16,185,129,0.3)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="773" y="133" fill="#94A3B8" font-size="10">Acción del usuario</text>
+  <rect x="754" y="140" width="12" height="12" rx="2" fill="rgba(244,63,94,0.3)" stroke="#F43F5E" stroke-width="1.5" transform="rotate(45 760 146)"/>
+  <text x="773" y="151" fill="#94A3B8" font-size="10">Decisión</text>
+  <line x1="754" y1="162" x2="766" y2="162" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="773" y="167" fill="#94A3B8" font-size="10">Navegación</text>
+
+  <!-- ===== START ===== -->
+  <!-- Inicio -->
+  <ellipse cx="120" cy="120" rx="60" ry="28" fill="url(#bg)" stroke="#A78BFA" stroke-width="2"/>
+  <text x="120" y="125" text-anchor="middle" fill="#A78BFA" font-size="12" font-weight="700">INICIO</text>
+
+  <!-- Arrow down -->
+  <line x1="120" y1="148" x2="120" y2="178" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Decisión: ¿Autenticado? -->
+  <polygon points="120,182 175,210 120,238 65,210" fill="rgba(244,63,94,0.15)" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="120" y="206" text-anchor="middle" fill="#FB7185" font-size="9" font-weight="700">¿Sesión</text>
+  <text x="120" y="218" text-anchor="middle" fill="#FB7185" font-size="9" font-weight="700">activa?</text>
+
+  <!-- NO → Login -->
+  <line x1="65" y1="210" x2="30" y2="210" stroke="#F43F5E" stroke-width="1.5"/>
+  <line x1="30" y1="210" x2="30" y2="290" stroke="#F43F5E" stroke-width="1.5" marker-end="url(#arrowR)"/>
+  <text x="47" y="207" fill="#FB7185" font-size="9">No</text>
+
+  <!-- Login Screen -->
+  <rect x="0" y="292" width="120" height="60" rx="10" fill="rgba(244,63,94,0.12)" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="60" y="318" text-anchor="middle" fill="#FB7185" font-size="11" font-weight="700">🔐 Login</text>
+  <text x="60" y="334" text-anchor="middle" fill="#94A3B8" font-size="9">Google / Email</text>
+
+  <!-- Login → Auth OK back -->
+  <line x1="120" y1="322" x2="150" y2="322" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="150" y1="322" x2="150" y2="210" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowG)"/>
+  <text x="155" y="270" fill="#34D399" font-size="8">Auth OK</text>
+
+  <!-- SI → Dashboard -->
+  <line x1="120" y1="238" x2="120" y2="290" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <text x="128" y="265" fill="#34D399" font-size="9">Sí</text>
+
+  <!-- DASHBOARD -->
+  <rect x="50" y="292" width="160" height="70" rx="12" fill="rgba(79,70,229,0.18)" stroke="#4F46E5" stroke-width="2"/>
+  <text x="130" y="320" text-anchor="middle" fill="#818CF8" font-size="14">📊</text>
+  <text x="130" y="338" text-anchor="middle" fill="#E2E8F0" font-size="12" font-weight="700">Dashboard</text>
+  <text x="130" y="353" text-anchor="middle" fill="#94A3B8" font-size="9">Resumen del día</text>
+
+  <!-- Bottom Nav from Dashboard -->
+  <text x="400" y="388" text-anchor="middle" fill="#64748B" font-size="9" letter-spacing="1">BOTTOM NAVIGATION BAR</text>
+  <rect x="210" y="394" width="580" height="46" rx="23" fill="rgba(79,70,229,0.1)" stroke="rgba(79,70,229,0.3)" stroke-width="1.5"/>
+  <text x="290" y="423" text-anchor="middle" fill="#818CF8" font-size="10" font-weight="600">📊 Dashboard</text>
+  <text x="390" y="423" text-anchor="middle" fill="#94A3B8" font-size="10">✅ Tareas</text>
+  <text x="500" y="423" text-anchor="middle" fill="#94A3B8" font-size="10">📅 Calendario</text>
+  <text x="620" y="423" text-anchor="middle" fill="#94A3B8" font-size="10">📜 Historial</text>
+  <text x="720" y="423" text-anchor="middle" fill="#94A3B8" font-size="10">⚙️ Config</text>
+
+  <!-- Connector from Dashboard to Nav -->
+  <line x1="210" y1="357" x2="210" y2="380" stroke="#4F46E5" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="210" y1="380" x2="390" y2="380" stroke="#4F46E5" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="390" y1="380" x2="390" y2="394" stroke="#4F46E5" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- ===== MODULE: TAREAS ===== -->
+  <rect x="230" y="460" width="150" height="60" rx="12" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="305" y="484" text-anchor="middle" fill="#818CF8" font-size="12">✅</text>
+  <text x="305" y="500" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Lista Tareas</text>
+  <text x="305" y="514" text-anchor="middle" fill="#94A3B8" font-size="9">Filtros · Búsqueda</text>
+  <line x1="390" y1="440" x2="390" y2="453" stroke="#4F46E5" stroke-width="1.5"/>
+  <line x1="390" y1="453" x2="305" y2="453" stroke="#4F46E5" stroke-width="1.5"/>
+  <line x1="305" y1="453" x2="305" y2="460" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Tarea actions -->
+  <rect x="230" y="548" width="68" height="44" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1"/>
+  <text x="264" y="568" text-anchor="middle" fill="#34D399" font-size="9" font-weight="700">+ Nueva</text>
+  <text x="264" y="582" text-anchor="middle" fill="#34D399" font-size="9">Tarea</text>
+  <rect x="310" y="548" width="68" height="44" rx="8" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="344" y="568" text-anchor="middle" fill="#FBBF24" font-size="9" font-weight="700">Editar</text>
+  <text x="344" y="582" text-anchor="middle" fill="#FBBF24" font-size="9">Tarea</text>
+
+  <line x1="305" y1="520" x2="305" y2="548" stroke="#4F46E5" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- Completar tarea -->
+  <ellipse cx="264" cy="624" rx="50" ry="20" fill="rgba(16,185,129,0.2)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="264" y="629" text-anchor="middle" fill="#34D399" font-size="9" font-weight="700">✓ Completar</text>
+  <line x1="264" y1="592" x2="264" y2="604" stroke="#10B981" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrowG)"/>
+
+  <!-- ===== MODULE: CALENDARIO ===== -->
+  <rect x="420" y="460" width="160" height="60" rx="12" fill="rgba(14,165,233,0.15)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="500" y="484" text-anchor="middle" fill="#38BDF8" font-size="12">📅</text>
+  <text x="500" y="500" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Calendario</text>
+  <text x="500" y="514" text-anchor="middle" fill="#94A3B8" font-size="9">Mensual · Semanal</text>
+  <line x1="500" y1="440" x2="500" y2="460" stroke="#0EA5E9" stroke-width="1.5" marker-end="url(#arrowT)"/>
+
+  <rect x="420" y="548" width="72" height="44" rx="8" fill="rgba(14,165,233,0.15)" stroke="#0EA5E9" stroke-width="1"/>
+  <text x="456" y="568" text-anchor="middle" fill="#38BDF8" font-size="9" font-weight="700">+ Nuevo</text>
+  <text x="456" y="582" text-anchor="middle" fill="#38BDF8" font-size="9">Evento</text>
+  <rect x="506" y="548" width="72" height="44" rx="8" fill="rgba(14,165,233,0.1)" stroke="#0EA5E9" stroke-width="1"/>
+  <text x="542" y="568" text-anchor="middle" fill="#38BDF8" font-size="9" font-weight="700">Ver</text>
+  <text x="542" y="582" text-anchor="middle" fill="#38BDF8" font-size="9">Detalle</text>
+  <line x1="500" y1="520" x2="500" y2="548" stroke="#0EA5E9" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrowT)"/>
+
+  <rect x="456" y="616" width="88" height="40" rx="8" fill="rgba(14,165,233,0.12)" stroke="#0EA5E9" stroke-width="1"/>
+  <text x="500" y="634" text-anchor="middle" fill="#38BDF8" font-size="9" font-weight="700">⏰ Agregar</text>
+  <text x="500" y="648" text-anchor="middle" fill="#38BDF8" font-size="9">Recordatorio</text>
+  <line x1="500" y1="592" x2="500" y2="616" stroke="#0EA5E9" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrowT)"/>
+
+  <!-- ===== MODULE: HISTORIAL ===== -->
+  <rect x="620" y="460" width="150" height="60" rx="12" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="695" y="484" text-anchor="middle" fill="#A78BFA" font-size="12">📜</text>
+  <text x="695" y="500" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Historial</text>
+  <text x="695" y="514" text-anchor="middle" fill="#94A3B8" font-size="9">Completadas · Stats</text>
+  <line x1="620" y1="440" x2="620" y2="453" stroke="#7C3AED" stroke-width="1.5"/>
+  <line x1="620" y1="453" x2="695" y2="453" stroke="#7C3AED" stroke-width="1.5"/>
+  <line x1="695" y1="453" x2="695" y2="460" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="644" y="548" width="102" height="44" rx="8" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1"/>
+  <text x="695" y="568" text-anchor="middle" fill="#A78BFA" font-size="9" font-weight="700">📊 Estadísticas</text>
+  <text x="695" y="582" text-anchor="middle" fill="#94A3B8" font-size="9">Racha · Gráficos</text>
+  <line x1="695" y1="520" x2="695" y2="548" stroke="#7C3AED" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- ===== MODULE: CONFIG ===== -->
+  <rect x="810" y="460" width="150" height="60" rx="12" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="885" y="484" text-anchor="middle" fill="#FBBF24" font-size="12">⚙️</text>
+  <text x="885" y="500" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Configuración</text>
+  <text x="885" y="514" text-anchor="middle" fill="#94A3B8" font-size="9">Perfil · Telegram</text>
+  <line x1="720" y1="440" x2="720" y2="453" stroke="#F59E0B" stroke-width="1.5"/>
+  <line x1="720" y1="453" x2="885" y2="453" stroke="#F59E0B" stroke-width="1.5"/>
+  <line x1="885" y1="453" x2="885" y2="460" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="820" y="548" width="72" height="44" rx="8" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="856" y="568" text-anchor="middle" fill="#FBBF24" font-size="9" font-weight="700">Vincular</text>
+  <text x="856" y="582" text-anchor="middle" fill="#FBBF24" font-size="9">Telegram</text>
+  <rect x="904" y="548" width="60" height="44" rx="8" fill="rgba(245,158,11,0.1)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="934" y="568" text-anchor="middle" fill="#FBBF24" font-size="9" font-weight="700">Etiquetas</text>
+  <text x="934" y="582" text-anchor="middle" fill="#FBBF24" font-size="9">Tags</text>
+  <line x1="885" y1="520" x2="885" y2="548" stroke="#F59E0B" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- Footer -->
+  <text x="500" y="710" text-anchor="middle" fill="#334155" font-size="9">FlowTime — Flujo de Navegación Usuario v1.0 · 2026</text>
+</svg>

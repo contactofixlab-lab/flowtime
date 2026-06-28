@@ -1,0 +1,167 @@
+<svg viewBox="0 0 900 680" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/>
+      <stop offset="100%" style="stop-color:#0F0F2E"/>
+    </linearGradient>
+    <linearGradient id="cronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B"/>
+      <stop offset="100%" style="stop-color:#D97706"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrY" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F43F5E"/>
+    </marker>
+    <marker id="arrT" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0EA5E9"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="680" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#FBBF24" font-size="11" font-weight="700" letter-spacing="2">DIAGRAMA DE FLUJO</text>
+  <text x="450" y="60" text-anchor="middle" fill="#E2E8F0" font-size="20" font-weight="800">Ciclo de Vida de un Recordatorio</text>
+
+  <!-- ============ CREACIÓN ============ -->
+  <text x="100" y="95" text-anchor="middle" fill="#64748B" font-size="10" letter-spacing="1.5">ORIGEN</text>
+
+  <!-- Desde App Web -->
+  <rect x="20" y="108" width="160" height="56" rx="12" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="100" y="132" text-anchor="middle" fill="#818CF8" font-size="12">🖥️</text>
+  <text x="100" y="150" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">App Web</text>
+  <text x="100" y="162" text-anchor="middle" fill="#94A3B8" font-size="9">Formulario de tarea/evento</text>
+
+  <!-- Desde Bot Telegram -->
+  <rect x="20" y="184" width="160" height="56" rx="12" fill="rgba(14,165,233,0.15)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="100" y="208" text-anchor="middle" fill="#38BDF8" font-size="12">📱</text>
+  <text x="100" y="226" text-anchor="middle" fill="#E2E8F0" font-size="11" font-weight="700">Bot Telegram</text>
+  <text x="100" y="238" text-anchor="middle" fill="#94A3B8" font-size="9">Comando /remind o voz</text>
+
+  <!-- Ambos apuntan a crear recordatorio -->
+  <line x1="180" y1="136" x2="270" y2="230" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="180" y1="212" x2="270" y2="230" stroke="#0EA5E9" stroke-width="1.5" marker-end="url(#arrT)"/>
+
+  <!-- ============ CREAR EN DB ============ -->
+  <rect x="272" y="204" width="196" height="70" rx="12" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="370" y="232" text-anchor="middle" fill="#34D399" font-size="13">🐘</text>
+  <text x="370" y="250" text-anchor="middle" fill="#E2E8F0" font-size="12" font-weight="700">Crear Reminder en DB</text>
+  <text x="370" y="264" text-anchor="middle" fill="#94A3B8" font-size="9">sent=false · scheduledAt=fecha elegida</text>
+
+  <!-- Campos del recordatorio -->
+  <rect x="272" y="290" width="196" height="96" rx="10" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.2)" stroke-width="1"/>
+  <text x="370" y="308" text-anchor="middle" fill="#64748B" font-size="9" font-weight="700">CAMPOS GUARDADOS</text>
+  <text x="284" y="324" fill="#94A3B8" font-size="9">message     → texto personalizado</text>
+  <text x="284" y="339" fill="#94A3B8" font-size="9">scheduledAt → fecha y hora</text>
+  <text x="284" y="354" fill="#94A3B8" font-size="9">channel     → TELEGRAM</text>
+  <text x="284" y="369" fill="#94A3B8" font-size="9">taskId / eventId → referencia</text>
+
+  <line x1="370" y1="274" x2="370" y2="290" stroke="#10B981" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- ============ VERCEL CRON ============ -->
+  <line x1="468" y1="239" x2="540" y2="239" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrY)"/>
+
+  <rect x="542" y="100" width="160" height="290" rx="14" fill="rgba(245,158,11,0.08)" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="622" y="124" text-anchor="middle" fill="#FBBF24" font-size="10" font-weight="700" letter-spacing="1">VERCEL CRON</text>
+  <text x="622" y="140" text-anchor="middle" fill="#FBBF24" font-size="10">⏱ cada minuto</text>
+
+  <line x1="622" y1="148" x2="622" y2="170" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrY)"/>
+
+  <!-- Cron paso 1 -->
+  <rect x="560" y="172" width="124" height="44" rx="8" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="622" y="191" text-anchor="middle" fill="#FBBF24" font-size="10" font-weight="700">GET /api/cron</text>
+  <text x="622" y="205" text-anchor="middle" fill="#94A3B8" font-size="9">/reminders</text>
+
+  <line x1="622" y1="216" x2="622" y2="236" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrY)"/>
+
+  <!-- Cron paso 2 -->
+  <rect x="560" y="238" width="124" height="44" rx="8" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="622" y="257" text-anchor="middle" fill="#FBBF24" font-size="10" font-weight="700">Consulta DB</text>
+  <text x="622" y="271" text-anchor="middle" fill="#94A3B8" font-size="9">sent=false + due</text>
+
+  <line x1="622" y1="282" x2="622" y2="302" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrY)"/>
+
+  <!-- Decisión: ¿hay recordatorios? -->
+  <polygon points="622,306 672,330 622,354 572,330" fill="rgba(244,63,94,0.12)" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="622" y="326" text-anchor="middle" fill="#FB7185" font-size="9" font-weight="700">¿Hay</text>
+  <text x="622" y="338" text-anchor="middle" fill="#FB7185" font-size="9" font-weight="700">pendientes?</text>
+
+  <!-- NO → espera -->
+  <line x1="572" y1="330" x2="560" y2="330" stroke="#64748B" stroke-width="1"/>
+  <line x1="560" y1="330" x2="560" y2="148" stroke="#64748B" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="535" y="240" fill="#64748B" font-size="8" transform="rotate(-90 535 240)">No → espera 1 min</text>
+
+  <!-- SI baja -->
+  <line x1="622" y1="354" x2="622" y2="374" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrG)"/>
+
+  <!-- Enviar via bot -->
+  <rect x="560" y="376" width="124" height="44" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1"/>
+  <text x="622" y="395" text-anchor="middle" fill="#34D399" font-size="10" font-weight="700">Enviar por bot</text>
+  <text x="622" y="409" text-anchor="middle" fill="#94A3B8" font-size="9">Grammy → Telegram</text>
+
+  <!-- ============ TELEGRAM ============ -->
+  <line x1="702" y1="398" x2="760" y2="398" stroke="#0EA5E9" stroke-width="1.5" marker-end="url(#arrT)"/>
+
+  <rect x="762" y="110" width="110" height="380" rx="14" fill="rgba(14,165,233,0.08)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="817" y="135" text-anchor="middle" fill="#38BDF8" font-size="10" font-weight="700">TELEGRAM</text>
+  <text x="817" y="152" text-anchor="middle" fill="#38BDF8" font-size="20">📱</text>
+
+  <!-- Mensaje en Telegram -->
+  <rect x="776" y="172" width="82" height="180" rx="10" fill="rgba(14,165,233,0.15)" stroke="rgba(14,165,233,0.3)" stroke-width="1"/>
+  <text x="817" y="192" text-anchor="middle" fill="#38BDF8" font-size="9" font-weight="700">Mensaje:</text>
+  <text x="817" y="208" text-anchor="middle" fill="#94A3B8" font-size="8">⏰ Recordatorio</text>
+  <text x="817" y="222" text-anchor="middle" fill="#94A3B8" font-size="8">📋 Llamar banco</text>
+  <text x="817" y="236" text-anchor="middle" fill="#94A3B8" font-size="8">🔴 Urgente</text>
+  <text x="817" y="250" text-anchor="middle" fill="#94A3B8" font-size="8">📅 Hoy 10:00</text>
+  <text x="817" y="270" text-anchor="middle" fill="#38BDF8" font-size="8">¿Completaste?</text>
+  <text x="817" y="284" text-anchor="middle" fill="#38BDF8" font-size="8">/done abc123</text>
+
+  <!-- Usuario responde -->
+  <line x1="817" y1="352" x2="817" y2="378" stroke="#0EA5E9" stroke-width="1.5" marker-end="url(#arrT)"/>
+  <rect x="776" y="380" width="82" height="44" rx="8" fill="rgba(14,165,233,0.2)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="817" y="400" text-anchor="middle" fill="#38BDF8" font-size="9" font-weight="700">Usuario</text>
+  <text x="817" y="414" text-anchor="middle" fill="#38BDF8" font-size="8">responde</text>
+
+  <!-- Respuesta va al bot -->
+  <line x1="762" y1="402" x2="702" y2="402" stroke="#10B981" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+
+  <!-- ============ MARCAR ENVIADO ============ -->
+  <line x1="622" y1="420" x2="622" y2="450" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrG)"/>
+
+  <rect x="560" y="452" width="124" height="44" rx="8" fill="rgba(16,185,129,0.2)" stroke="#10B981" stroke-width="2"/>
+  <text x="622" y="471" text-anchor="middle" fill="#34D399" font-size="10" font-weight="700">Marcar sent=true</text>
+  <text x="622" y="485" text-anchor="middle" fill="#94A3B8" font-size="9">sentAt = now()</text>
+
+  <!-- ============ ACCIÓN DEL USUARIO ============ -->
+  <line x1="622" y1="496" x2="622" y2="524" stroke="#4F46E5" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Decisión: ¿usuario completa? -->
+  <polygon points="622,528 686,556 622,584 558,556" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="622" y="552" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">¿Usuario</text>
+  <text x="622" y="564" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">completa?</text>
+
+  <!-- SÍ -->
+  <line x1="686" y1="556" x2="760" y2="556" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrG)"/>
+  <text x="720" y="548" fill="#34D399" font-size="9">Sí</text>
+  <rect x="762" y="534" width="110" height="44" rx="10" fill="rgba(16,185,129,0.2)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="817" y="554" text-anchor="middle" fill="#34D399" font-size="10" font-weight="700">✅ Tarea</text>
+  <text x="817" y="568" text-anchor="middle" fill="#34D399" font-size="10" font-weight="700">Completada</text>
+
+  <!-- NO -->
+  <line x1="622" y1="584" x2="622" y2="614" stroke="#F43F5E" stroke-width="1.5" marker-end="url(#arrR)"/>
+  <text x="630" y="600" fill="#FB7185" font-size="9">No</text>
+  <rect x="542" y="616" width="160" height="44" rx="10" fill="rgba(244,63,94,0.12)" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="622" y="636" text-anchor="middle" fill="#FB7185" font-size="10" font-weight="700">Tarea sigue pendiente</text>
+  <text x="622" y="650" text-anchor="middle" fill="#94A3B8" font-size="9">Queda en lista de tareas</text>
+
+  <!-- Footer -->
+  <text x="450" y="672" text-anchor="middle" fill="#334155" font-size="9">FlowTime — Ciclo de Vida de Recordatorio v1.0 · Vercel Cron + Grammy · 2026</text>
+</svg>
