@@ -1,0 +1,120 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/><stop offset="100%" style="stop-color:#0F0F2E"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#818CF8"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#34D399"/>
+    </marker>
+    <marker id="arrD" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <text x="450" y="34" text-anchor="middle" fill="#A78BFA" font-size="11" font-weight="700" letter-spacing="2">UML — DIAGRAMA DE SECUENCIA</text>
+  <text x="450" y="56" text-anchor="middle" fill="#E2E8F0" font-size="18" font-weight="800">Crear Tarea desde la App Web</text>
+
+  <!-- ══ LIFELINE HEADERS ══ -->
+  <!-- Usuario -->
+  <rect x="40" y="74" width="100" height="38" rx="8" fill="rgba(79,70,229,0.2)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="90" y="98" text-anchor="middle" fill="#818CF8" font-size="11" font-weight="700">Usuario</text>
+
+  <!-- Browser -->
+  <rect x="200" y="74" width="110" height="38" rx="8" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="255" y="98" text-anchor="middle" fill="#818CF8" font-size="11" font-weight="700">Browser / UI</text>
+
+  <!-- Next.js API -->
+  <rect x="380" y="74" width="120" height="38" rx="8" fill="rgba(14,165,233,0.15)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="440" y="91" text-anchor="middle" fill="#38BDF8" font-size="11" font-weight="700">Next.js</text>
+  <text x="440" y="105" text-anchor="middle" fill="#38BDF8" font-size="10">API Route</text>
+
+  <!-- NextAuth -->
+  <rect x="565" y="74" width="110" height="38" rx="8" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="620" y="91" text-anchor="middle" fill="#A78BFA" font-size="11" font-weight="700">NextAuth</text>
+  <text x="620" y="105" text-anchor="middle" fill="#A78BFA" font-size="10">Sesión</text>
+
+  <!-- Prisma / DB -->
+  <rect x="745" y="74" width="120" height="38" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="805" y="91" text-anchor="middle" fill="#34D399" font-size="11" font-weight="700">Prisma</text>
+  <text x="805" y="105" text-anchor="middle" fill="#34D399" font-size="10">Neon Postgres</text>
+
+  <!-- ══ LIFELINES ══ -->
+  <line x1="90"  y1="112" x2="90"  y2="580" stroke="#4F46E5" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+  <line x1="255" y1="112" x2="255" y2="580" stroke="#4F46E5" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+  <line x1="440" y1="112" x2="440" y2="580" stroke="#0EA5E9" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+  <line x1="620" y1="112" x2="620" y2="580" stroke="#7C3AED" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+  <line x1="805" y1="112" x2="805" y2="580" stroke="#10B981" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- ══ MESSAGES ══ -->
+  <!-- 1. Abre /tasks/new -->
+  <line x1="90" y1="148" x2="248" y2="148" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="168" y="142" text-anchor="middle" fill="#94A3B8" font-size="10">1. Navega a /tasks/new</text>
+  <!-- Activation box Browser -->
+  <rect x="248" y="148" width="14" height="38" fill="rgba(79,70,229,0.3)" stroke="#4F46E5" stroke-width="1"/>
+
+  <!-- 2. Renderiza formulario -->
+  <line x1="248" y1="168" x2="97" y2="168" stroke="#64748B" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrD)"/>
+  <text x="168" y="162" text-anchor="middle" fill="#64748B" font-size="10">2. Muestra formulario</text>
+
+  <!-- 3. Completa formulario -->
+  <line x1="90" y1="210" x2="248" y2="210" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="168" y="204" text-anchor="middle" fill="#94A3B8" font-size="10">3. Llena formulario + submit</text>
+
+  <!-- Activation box API -->
+  <rect x="433" y="228" width="14" height="200" fill="rgba(14,165,233,0.2)" stroke="#0EA5E9" stroke-width="1"/>
+
+  <!-- 4. POST /api/tasks -->
+  <line x1="262" y1="228" x2="433" y2="228" stroke="#818CF8" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="348" y="222" text-anchor="middle" fill="#94A3B8" font-size="10">4. POST /api/tasks</text>
+
+  <!-- 5. Verificar sesión -->
+  <rect x="613" y="248" width="14" height="38" fill="rgba(124,58,237,0.25)" stroke="#7C3AED" stroke-width="1"/>
+  <line x1="447" y1="248" x2="613" y2="248" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="530" y="242" text-anchor="middle" fill="#A78BFA" font-size="10">5. getServerSession()</text>
+
+  <!-- 6. Retorna sesión OK -->
+  <line x1="613" y1="268" x2="454" y2="268" stroke="#64748B" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrD)"/>
+  <text x="530" y="262" text-anchor="middle" fill="#64748B" font-size="10">6. session OK { userId }</text>
+
+  <!-- 7. Validar datos -->
+  <rect x="248" y="295" width="14" height="14" fill="rgba(79,70,229,0.2)" stroke="#4F46E5" stroke-width="1"/>
+  <text x="447" y="302" fill="#64748B" font-size="10">7. Validar input (title, priority, dueDate...)</text>
+
+  <!-- 8. prisma.task.create -->
+  <rect x="798" y="322" width="14" height="52" fill="rgba(16,185,129,0.25)" stroke="#10B981" stroke-width="1"/>
+  <line x1="447" y1="322" x2="798" y2="322" stroke="#34D399" stroke-width="1.5" marker-end="url(#arrG)"/>
+  <text x="622" y="316" text-anchor="middle" fill="#34D399" font-size="10">8. prisma.task.create({ ... })</text>
+
+  <!-- 9. INSERT INTO tasks -->
+  <text x="805" y="345" text-anchor="middle" fill="#64748B" font-size="9" font-style="italic">INSERT INTO tasks</text>
+
+  <!-- 10. Retorna tarea creada -->
+  <line x1="798" y1="374" x2="454" y2="374" stroke="#64748B" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrD)"/>
+  <text x="622" y="368" text-anchor="middle" fill="#64748B" font-size="10">10. Task { id, title, status... }</text>
+
+  <!-- 11. 201 Created -->
+  <line x1="433" y1="406" x2="262" y2="406" stroke="#64748B" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrD)"/>
+  <text x="348" y="400" text-anchor="middle" fill="#64748B" font-size="10">11. 201 { task }</text>
+
+  <!-- 12. revalidatePath -->
+  <text x="262" y="432" fill="#94A3B8" font-size="10">12. revalidatePath('/tasks') → re-render lista</text>
+
+  <!-- 13. Muestra confirmación -->
+  <line x1="255" y1="450" x2="97" y2="450" stroke="#64748B" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrD)"/>
+  <text x="168" y="444" text-anchor="middle" fill="#64748B" font-size="10">13. Toast "Tarea creada ✓"</text>
+
+  <!-- ══ OPTIONAL: Crear Reminder ══ -->
+  <!-- opt box -->
+  <rect x="420" y="466" width="400" height="80" rx="8" fill="rgba(245,158,11,0.06)" stroke="rgba(245,158,11,0.3)" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="432" y="482" fill="#FBBF24" font-size="9" font-weight="700">opt [si tiene recordatorio]</text>
+  <line x1="447" y1="495" x2="798" y2="495" stroke="#FBBF24" stroke-width="1.5" marker-end="url(#arrG)"/>
+  <text x="622" y="489" text-anchor="middle" fill="#FBBF24" font-size="10">14. prisma.reminder.create()</text>
+  <line x1="798" y1="515" x2="454" y2="515" stroke="#64748B" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrD)"/>
+  <text x="622" y="509" text-anchor="middle" fill="#64748B" font-size="10">15. Reminder creado</text>
+
+  <text x="450" y="608" text-anchor="middle" fill="#334155" font-size="9">FlowTime — UML Secuencia: Crear Tarea Web v1.0 · 2026</text>
+</svg>

@@ -1,0 +1,89 @@
+<svg viewBox="0 0 400 780" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/><stop offset="100%" style="stop-color:#120A2E"/>
+    </linearGradient>
+    <linearGradient id="indigoBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/><stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#141428"/><stop offset="100%" style="stop-color:#0F0F22"/>
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+
+  <!-- Dimmed background (modal overlay) -->
+  <rect width="400" height="780" fill="url(#bg)" rx="40"/>
+  <rect width="400" height="780" fill="rgba(0,0,0,0.55)" rx="40"/>
+
+  <!-- Blurred background content hint -->
+  <circle cx="200" cy="300" r="150" fill="rgba(79,70,229,0.08)" filter="url(#blur1)"/>
+
+  <!-- Bottom Sheet Modal -->
+  <rect x="0" y="168" width="400" height="612" rx="28" fill="url(#sheet)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Handle bar -->
+  <rect x="168" y="182" width="64" height="5" rx="3" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Modal title -->
+  <text x="24" y="222" fill="#E2E8F0" font-size="20" font-weight="800">Nueva Tarea</text>
+  <text x="376" y="222" text-anchor="end" fill="#64748B" font-size="22">✕</text>
+
+  <!-- ── Título ── -->
+  <text x="24" y="252" fill="#94A3B8" font-size="11" font-weight="700" letter-spacing="1">TÍTULO</text>
+  <rect x="16" y="260" width="368" height="46" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(79,70,229,0.5)" stroke-width="1.5"/>
+  <text x="32" y="288" fill="#E2E8F0" font-size="14">Llamar al banco</text>
+  <rect x="354" y="276" width="2" height="18" rx="1" fill="#818CF8"/>
+
+  <!-- ── Descripción ── -->
+  <text x="24" y="326" fill="#94A3B8" font-size="11" font-weight="700" letter-spacing="1">DESCRIPCIÓN</text>
+  <rect x="16" y="334" width="368" height="64" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="32" y="358" fill="#64748B" font-size="12">Preguntar por estado de solicitud...</text>
+
+  <!-- ── Prioridad ── -->
+  <text x="24" y="420" fill="#94A3B8" font-size="11" font-weight="700" letter-spacing="1">PRIORIDAD</text>
+  <rect x="16"  y="428" width="78" height="34" rx="17" fill="rgba(244,63,94,0.25)" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="55"  y="449" text-anchor="middle" fill="#FB7185" font-size="11" font-weight="700">🔴 Urgente</text>
+  <rect x="102" y="428" width="64" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="134" y="449" text-anchor="middle" fill="#64748B" font-size="11">🟠 Alta</text>
+  <rect x="174" y="428" width="64" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="206" y="449" text-anchor="middle" fill="#64748B" font-size="11">🔵 Media</text>
+  <rect x="246" y="428" width="56" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="274" y="449" text-anchor="middle" fill="#64748B" font-size="11">⚪ Baja</text>
+
+  <!-- ── Fecha límite ── -->
+  <text x="24" y="486" fill="#94A3B8" font-size="11" font-weight="700" letter-spacing="1">FECHA LÍMITE</text>
+  <rect x="16" y="494" width="176" height="44" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="32" y="512" fill="#64748B" font-size="12">📅</text>
+  <text x="52" y="521" fill="#E2E8F0" font-size="13">29 Jun 2026</text>
+
+  <!-- Hora -->
+  <rect x="204" y="494" width="180" height="44" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="220" y="512" fill="#64748B" font-size="12">🕐</text>
+  <text x="240" y="521" fill="#E2E8F0" font-size="13">10:00 AM</text>
+
+  <!-- ── Etiquetas ── -->
+  <text x="24" y="560" fill="#94A3B8" font-size="11" font-weight="700" letter-spacing="1">ETIQUETAS</text>
+  <rect x="16"  y="568" width="74" height="28" rx="14" fill="rgba(245,158,11,0.2)" stroke="rgba(245,158,11,0.4)" stroke-width="1"/>
+  <text x="53"  y="586" text-anchor="middle" fill="#FBBF24" font-size="10">💰 Finanzas</text>
+  <rect x="98"  y="568" width="60" height="28" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="128" y="586" text-anchor="middle" fill="#64748B" font-size="10">+ Agregar</text>
+
+  <!-- ── Recordatorio ── -->
+  <text x="24" y="620" fill="#94A3B8" font-size="11" font-weight="700" letter-spacing="1">RECORDATORIO POR TELEGRAM</text>
+  <rect x="16" y="628" width="368" height="44" rx="12" fill="rgba(79,70,229,0.08)" stroke="rgba(79,70,229,0.2)" stroke-width="1"/>
+  <text x="32" y="646" fill="#64748B" font-size="12">🤖</text>
+  <text x="52" y="654" fill="#E2E8F0" font-size="13">30 min antes (9:30 AM)</text>
+  <!-- Toggle ON -->
+  <rect x="340" y="638" width="36" height="20" rx="10" fill="#4F46E5"/>
+  <circle cx="366" cy="648" r="8" fill="white"/>
+
+  <!-- ── Botones ── -->
+  <rect x="16" y="690" width="170" height="50" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="101" y="720" text-anchor="middle" fill="#94A3B8" font-size="14" font-weight="600">Cancelar</text>
+
+  <rect x="198" y="690" width="186" height="50" rx="14" fill="url(#indigoBtn)"/>
+  <text x="291" y="720" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Crear Tarea ✓</text>
+
+  <text x="200" y="760" text-anchor="middle" fill="#1E293B" font-size="11">FlowTime — Formulario Nueva Tarea</text>
+</svg>

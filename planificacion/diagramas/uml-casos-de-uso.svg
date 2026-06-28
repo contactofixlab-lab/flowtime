@@ -1,0 +1,138 @@
+<svg viewBox="0 0 960 700" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/><stop offset="100%" style="stop-color:#0F0F2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="700" fill="url(#bg)" rx="16"/>
+
+  <text x="480" y="36" text-anchor="middle" fill="#A78BFA" font-size="11" font-weight="700" letter-spacing="2">UML — DIAGRAMA DE CASOS DE USO</text>
+  <text x="480" y="58" text-anchor="middle" fill="#E2E8F0" font-size="20" font-weight="800">FlowTime — Use Case Diagram</text>
+
+  <!-- ══════ ACTOR: USUARIO WEB ══════ -->
+  <!-- Stick figure -->
+  <circle cx="72" cy="200" r="18" fill="none" stroke="#818CF8" stroke-width="2"/>
+  <line x1="72" y1="218" x2="72" y2="280" stroke="#818CF8" stroke-width="2"/>
+  <line x1="72" y1="238" x2="44" y2="258" stroke="#818CF8" stroke-width="2"/>
+  <line x1="72" y1="238" x2="100" y2="258" stroke="#818CF8" stroke-width="2"/>
+  <line x1="72" y1="280" x2="50" y2="310" stroke="#818CF8" stroke-width="2"/>
+  <line x1="72" y1="280" x2="94" y2="310" stroke="#818CF8" stroke-width="2"/>
+  <text x="72" y="330" text-anchor="middle" fill="#818CF8" font-size="12" font-weight="700">Usuario Web</text>
+  <text x="72" y="345" text-anchor="middle" fill="#64748B" font-size="10">(Vicente)</text>
+
+  <!-- ══════ ACTOR: BOT / TELEGRAM ══════ -->
+  <circle cx="72" cy="490" r="18" fill="none" stroke="#38BDF8" stroke-width="2"/>
+  <line x1="72" y1="508" x2="72" y2="570" stroke="#38BDF8" stroke-width="2"/>
+  <line x1="72" y1="528" x2="44" y2="548" stroke="#38BDF8" stroke-width="2"/>
+  <line x1="72" y1="528" x2="100" y2="548" stroke="#38BDF8" stroke-width="2"/>
+  <line x1="72" y1="570" x2="50" y2="600" stroke="#38BDF8" stroke-width="2"/>
+  <line x1="72" y1="570" x2="94" y2="600" stroke="#38BDF8" stroke-width="2"/>
+  <text x="72" y="620" text-anchor="middle" fill="#38BDF8" font-size="12" font-weight="700">Usuario Telegram</text>
+  <text x="72" y="635" text-anchor="middle" fill="#64748B" font-size="10">(Bot móvil)</text>
+
+  <!-- ══════ ACTOR: SISTEMA (Cron) ══════ -->
+  <circle cx="888" cy="380" r="18" fill="none" stroke="#FBBF24" stroke-width="2"/>
+  <line x1="888" y1="398" x2="888" y2="460" stroke="#FBBF24" stroke-width="2"/>
+  <line x1="888" y1="418" x2="860" y2="438" stroke="#FBBF24" stroke-width="2"/>
+  <line x1="888" y1="418" x2="916" y2="438" stroke="#FBBF24" stroke-width="2"/>
+  <line x1="888" y1="460" x2="866" y2="490" stroke="#FBBF24" stroke-width="2"/>
+  <line x1="888" y1="460" x2="910" y2="490" stroke="#FBBF24" stroke-width="2"/>
+  <text x="888" y="510" text-anchor="middle" fill="#FBBF24" font-size="12" font-weight="700">Vercel Cron</text>
+  <text x="888" y="525" text-anchor="middle" fill="#64748B" font-size="10">(Sistema)</text>
+
+  <!-- ══════ SYSTEM BOUNDARY ══════ -->
+  <rect x="140" y="80" width="700" height="590" rx="16" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <text x="490" y="102" text-anchor="middle" fill="#64748B" font-size="11" letter-spacing="1.5">SISTEMA FLOWTIME</text>
+
+  <!-- ══════ USE CASES — WEB ══════ -->
+  <!-- Autenticarse -->
+  <ellipse cx="320" cy="148" rx="90" ry="24" fill="rgba(79,70,229,0.15)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="320" y="153" text-anchor="middle" fill="#E2E8F0" font-size="11">Autenticarse</text>
+  <line x1="100" y1="215" x2="230" y2="155" stroke="#818CF8" stroke-width="1" stroke-dasharray="0"/>
+
+  <!-- Ver Dashboard -->
+  <ellipse cx="320" cy="210" rx="90" ry="24" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="320" y="215" text-anchor="middle" fill="#E2E8F0" font-size="11">Ver Dashboard</text>
+  <line x1="100" y1="225" x2="230" y2="218" stroke="#818CF8" stroke-width="1"/>
+
+  <!-- Crear Tarea -->
+  <ellipse cx="320" cy="272" rx="90" ry="24" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="320" y="277" text-anchor="middle" fill="#E2E8F0" font-size="11">Crear Tarea</text>
+  <line x1="100" y1="240" x2="230" y2="273" stroke="#818CF8" stroke-width="1"/>
+
+  <!-- Editar / Completar Tarea -->
+  <ellipse cx="320" cy="334" rx="90" ry="24" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="320" y="339" text-anchor="middle" fill="#E2E8F0" font-size="11">Editar / Completar Tarea</text>
+  <line x1="100" y1="255" x2="230" y2="335" stroke="#818CF8" stroke-width="1"/>
+
+  <!-- Ver Calendario -->
+  <ellipse cx="320" cy="396" rx="90" ry="24" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="320" y="401" text-anchor="middle" fill="#E2E8F0" font-size="11">Ver Calendario</text>
+  <line x1="100" y1="265" x2="230" y2="397" stroke="#818CF8" stroke-width="1"/>
+
+  <!-- Crear Evento -->
+  <ellipse cx="320" cy="458" rx="90" ry="24" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="320" y="463" text-anchor="middle" fill="#E2E8F0" font-size="11">Crear Evento</text>
+  <line x1="100" y1="270" x2="230" y2="459" stroke="#818CF8" stroke-width="1"/>
+
+  <!-- Ver Historial -->
+  <ellipse cx="320" cy="520" rx="90" ry="24" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="320" y="525" text-anchor="middle" fill="#E2E8F0" font-size="11">Ver Historial</text>
+  <line x1="100" y1="275" x2="230" y2="521" stroke="#818CF8" stroke-width="1"/>
+
+  <!-- Configurar Perfil -->
+  <ellipse cx="320" cy="582" rx="90" ry="24" fill="rgba(79,70,229,0.12)" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="320" y="587" text-anchor="middle" fill="#E2E8F0" font-size="11">Configurar Perfil</text>
+  <line x1="100" y1="280" x2="230" y2="583" stroke="#818CF8" stroke-width="1"/>
+
+  <!-- ══════ USE CASES — TELEGRAM ══════ -->
+  <!-- Crear Tarea via Bot -->
+  <ellipse cx="640" cy="400" rx="108" ry="24" fill="rgba(14,165,233,0.15)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="640" y="405" text-anchor="middle" fill="#E2E8F0" font-size="11">Crear Tarea vía Bot</text>
+  <line x1="100" y1="505" x2="532" y2="406" stroke="#38BDF8" stroke-width="1"/>
+
+  <!-- Crear Tarea por Voz -->
+  <ellipse cx="640" cy="460" rx="108" ry="24" fill="rgba(14,165,233,0.15)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="640" y="465" text-anchor="middle" fill="#E2E8F0" font-size="11">Crear Tarea por Voz (Whisper)</text>
+  <line x1="100" y1="515" x2="532" y2="461" stroke="#38BDF8" stroke-width="1"/>
+
+  <!-- Listar Tareas -->
+  <ellipse cx="640" cy="520" rx="108" ry="24" fill="rgba(14,165,233,0.12)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="640" y="525" text-anchor="middle" fill="#E2E8F0" font-size="11">Listar Tareas Pendientes</text>
+  <line x1="100" y1="530" x2="532" y2="521" stroke="#38BDF8" stroke-width="1"/>
+
+  <!-- Marcar Completada -->
+  <ellipse cx="640" cy="580" rx="108" ry="24" fill="rgba(14,165,233,0.12)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="640" y="585" text-anchor="middle" fill="#E2E8F0" font-size="11">Marcar Tarea Completada</text>
+  <line x1="100" y1="540" x2="532" y2="581" stroke="#38BDF8" stroke-width="1"/>
+
+  <!-- Vincular Cuenta -->
+  <ellipse cx="640" cy="340" rx="108" ry="24" fill="rgba(14,165,233,0.15)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="640" y="345" text-anchor="middle" fill="#E2E8F0" font-size="11">Vincular Cuenta Telegram</text>
+  <line x1="100" y1="490" x2="532" y2="341" stroke="#38BDF8" stroke-width="1"/>
+  <!-- Web actor also can link -->
+  <line x1="100" y1="265" x2="532" y2="341" stroke="#818CF8" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- ══════ USE CASES — CRON ══════ -->
+  <!-- Enviar Recordatorio -->
+  <ellipse cx="640" cy="210" rx="108" ry="24" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="640" y="215" text-anchor="middle" fill="#E2E8F0" font-size="11">Enviar Recordatorio Automático</text>
+  <line x1="860" y1="395" x2="748" y2="218" stroke="#FBBF24" stroke-width="1"/>
+
+  <!-- Verificar DB -->
+  <ellipse cx="640" cy="272" rx="108" ry="24" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="640" y="277" text-anchor="middle" fill="#E2E8F0" font-size="11">Verificar Recordatorios Pendientes</text>
+  <line x1="860" y1="400" x2="748" y2="278" stroke="#FBBF24" stroke-width="1"/>
+
+  <!-- «include» relations -->
+  <!-- Crear tarea web →include→ Crear tarea bot (shared DB) -->
+  <line x1="410" y1="272" x2="532" y2="400" stroke="#64748B" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="466" y="340" fill="#64748B" font-size="9" transform="rotate(-30 466 340)">«include»</text>
+
+  <!-- Enviar recordatorio →include→ verificar -->
+  <line x1="640" y1="234" x2="640" y2="248" stroke="#F59E0B" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="648" y="244" fill="#64748B" font-size="9">«include»</text>
+
+  <!-- Footer -->
+  <text x="480" y="688" text-anchor="middle" fill="#334155" font-size="9">FlowTime — UML Casos de Uso v1.0 · 2026</text>
+</svg>

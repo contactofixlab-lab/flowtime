@@ -1,0 +1,150 @@
+<svg viewBox="0 0 400 780" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/><stop offset="100%" style="stop-color:#120A2E"/>
+    </linearGradient>
+    <linearGradient id="nav" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(15,15,40,0.95)"/><stop offset="100%" style="stop-color:rgba(10,10,30,0.98)"/>
+    </linearGradient>
+    <linearGradient id="indigoBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/><stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+
+  <rect width="400" height="780" fill="url(#bg)" rx="40"/>
+  <circle cx="50" cy="200" r="120" fill="rgba(14,165,233,0.10)" filter="url(#blur1)"/>
+  <circle cx="370" cy="500" r="90" fill="rgba(124,58,237,0.08)" filter="url(#blur1)"/>
+
+  <!-- Status bar -->
+  <text x="24" y="26" fill="#94A3B8" font-size="11" font-weight="600">9:41</text>
+  <text x="376" y="26" text-anchor="end" fill="#94A3B8" font-size="11">●●●</text>
+
+  <!-- Header -->
+  <text x="24" y="68" fill="#E2E8F0" font-size="24" font-weight="800">Calendario</text>
+  <!-- View toggle -->
+  <rect x="268" y="50" width="108" height="30" rx="15" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="270" y="52" width="50" height="26" rx="13" fill="url(#indigoBtn)"/>
+  <text x="295" y="69" text-anchor="middle" fill="#fff" font-size="10" font-weight="700">Mes</text>
+  <text x="348" y="69" text-anchor="middle" fill="#475569" font-size="10">Semana</text>
+
+  <!-- Month + nav -->
+  <text x="200" y="104" text-anchor="middle" fill="#E2E8F0" font-size="16" font-weight="700">Junio 2026</text>
+  <text x="30" y="104" fill="#818CF8" font-size="18">‹</text>
+  <text x="370" y="104" text-anchor="end" fill="#818CF8" font-size="18">›</text>
+
+  <!-- Day headers -->
+  <text x="34"  y="126" text-anchor="middle" fill="#64748B" font-size="10">L</text>
+  <text x="86"  y="126" text-anchor="middle" fill="#64748B" font-size="10">M</text>
+  <text x="138" y="126" text-anchor="middle" fill="#64748B" font-size="10">X</text>
+  <text x="190" y="126" text-anchor="middle" fill="#64748B" font-size="10">J</text>
+  <text x="242" y="126" text-anchor="middle" fill="#64748B" font-size="10">V</text>
+  <text x="294" y="126" text-anchor="middle" fill="#94A3B8" font-size="10">S</text>
+  <text x="346" y="126" text-anchor="middle" fill="#94A3B8" font-size="10">D</text>
+
+  <!-- WEEK 1 -->
+  <text x="34"  y="154" text-anchor="middle" fill="#64748B" font-size="13">1</text>
+  <text x="86"  y="154" text-anchor="middle" fill="#64748B" font-size="13">2</text>
+  <text x="138" y="154" text-anchor="middle" fill="#64748B" font-size="13">3</text>
+  <text x="190" y="154" text-anchor="middle" fill="#64748B" font-size="13">4</text>
+  <text x="242" y="154" text-anchor="middle" fill="#64748B" font-size="13">5</text>
+  <text x="294" y="154" text-anchor="middle" fill="#475569" font-size="13">6</text>
+  <text x="346" y="154" text-anchor="middle" fill="#475569" font-size="13">7</text>
+  <!-- Event dot W1 -->
+  <circle cx="138" cy="162" r="3" fill="#4F46E5"/>
+  <circle cx="242" cy="162" r="3" fill="#10B981"/>
+
+  <!-- WEEK 2 -->
+  <text x="34"  y="192" text-anchor="middle" fill="#64748B" font-size="13">8</text>
+  <text x="86"  y="192" text-anchor="middle" fill="#64748B" font-size="13">9</text>
+  <text x="138" y="192" text-anchor="middle" fill="#64748B" font-size="13">10</text>
+  <text x="190" y="192" text-anchor="middle" fill="#64748B" font-size="13">11</text>
+  <text x="242" y="192" text-anchor="middle" fill="#64748B" font-size="13">12</text>
+  <text x="294" y="192" text-anchor="middle" fill="#475569" font-size="13">13</text>
+  <text x="346" y="192" text-anchor="middle" fill="#475569" font-size="13">14</text>
+  <circle cx="86"  cy="200" r="3" fill="#F43F5E"/>
+  <circle cx="190" cy="200" r="3" fill="#4F46E5"/>
+  <circle cx="190" cy="200" r="3" fill="#4F46E5"/>
+
+  <!-- WEEK 3 -->
+  <text x="34"  y="230" text-anchor="middle" fill="#64748B" font-size="13">15</text>
+  <text x="86"  y="230" text-anchor="middle" fill="#64748B" font-size="13">16</text>
+  <text x="138" y="230" text-anchor="middle" fill="#64748B" font-size="13">17</text>
+  <text x="190" y="230" text-anchor="middle" fill="#64748B" font-size="13">18</text>
+  <text x="242" y="230" text-anchor="middle" fill="#64748B" font-size="13">19</text>
+  <text x="294" y="230" text-anchor="middle" fill="#475569" font-size="13">20</text>
+  <text x="346" y="230" text-anchor="middle" fill="#475569" font-size="13">21</text>
+  <circle cx="34"  cy="238" r="3" fill="#0EA5E9"/>
+  <circle cx="346" cy="238" r="3" fill="#F59E0B"/>
+
+  <!-- WEEK 4 -->
+  <text x="34"  y="268" text-anchor="middle" fill="#64748B" font-size="13">22</text>
+  <text x="86"  y="268" text-anchor="middle" fill="#64748B" font-size="13">23</text>
+  <text x="138" y="268" text-anchor="middle" fill="#64748B" font-size="13">24</text>
+  <text x="190" y="268" text-anchor="middle" fill="#64748B" font-size="13">25</text>
+  <text x="242" y="268" text-anchor="middle" fill="#64748B" font-size="13">26</text>
+  <text x="294" y="268" text-anchor="middle" fill="#475569" font-size="13">27</text>
+  <text x="346" y="268" text-anchor="middle" fill="#475569" font-size="13">28</text>
+  <circle cx="86"  cy="276" r="3" fill="#4F46E5"/>
+
+  <!-- WEEK 5 — TODAY highlighted -->
+  <circle cx="34"  cy="308" r="16" fill="url(#indigoBtn)"/>
+  <text x="34"  y="313" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">29</text>
+  <text x="86"  y="306" text-anchor="middle" fill="#64748B" font-size="13">30</text>
+  <!-- dots -->
+  <circle cx="34"  cy="324" r="3" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="86"  cy="314" r="3" fill="#F43F5E"/>
+
+  <!-- Divider -->
+  <line x1="16" y1="340" x2="384" y2="340" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Selected day detail -->
+  <text x="24" y="364" fill="#E2E8F0" font-size="14" font-weight="700">Hoy — Domingo 29 junio</text>
+  <text x="376" y="364" text-anchor="end" fill="#818CF8" font-size="11">+ Evento</text>
+
+  <!-- Event block 1 -->
+  <rect x="16" y="374" width="368" height="68" rx="14" fill="rgba(79,70,229,0.12)" stroke="rgba(79,70,229,0.25)" stroke-width="1"/>
+  <rect x="16" y="374" width="4" height="68" rx="2" fill="#4F46E5"/>
+  <text x="32" y="397" fill="#818CF8" font-size="11" font-weight="700">09:00 — 10:00</text>
+  <text x="32" y="414" fill="#E2E8F0" font-size="13" font-weight="600">Llamar al banco 📞</text>
+  <text x="32" y="430" fill="#64748B" font-size="10">Tarea urgente · Recordatorio: 8:45</text>
+
+  <!-- Event block 2 -->
+  <rect x="16" y="450" width="368" height="68" rx="14" fill="rgba(14,165,233,0.10)" stroke="rgba(14,165,233,0.25)" stroke-width="1"/>
+  <rect x="16" y="450" width="4" height="68" rx="2" fill="#0EA5E9"/>
+  <text x="32" y="473" fill="#38BDF8" font-size="11" font-weight="700">14:00 — 15:30</text>
+  <text x="32" y="490" fill="#E2E8F0" font-size="13" font-weight="600">Reunión con equipo 👥</text>
+  <text x="32" y="506" fill="#64748B" font-size="10">Sala 3, piso 4</text>
+
+  <!-- Event block 3 -->
+  <rect x="16" y="526" width="368" height="68" rx="14" fill="rgba(16,185,129,0.10)" stroke="rgba(16,185,129,0.25)" stroke-width="1"/>
+  <rect x="16" y="526" width="4" height="68" rx="2" fill="#10B981"/>
+  <text x="32" y="549" fill="#34D399" font-size="11" font-weight="700">17:00 — 18:00</text>
+  <text x="32" y="566" fill="#E2E8F0" font-size="13" font-weight="600">Review cierre mensual 📊</text>
+  <text x="32" y="582" fill="#64748B" font-size="10">Con directivos · Remoto</text>
+
+  <!-- Task chips in calendar -->
+  <text x="24" y="618" fill="#64748B" font-size="11" font-weight="700">Tareas con fecha hoy</text>
+  <rect x="16" y="628" width="368" height="40" rx="10" fill="rgba(244,63,94,0.08)" stroke="rgba(244,63,94,0.2)" stroke-width="1"/>
+  <circle cx="36" cy="648" r="7" fill="transparent" stroke="rgba(244,63,94,0.5)" stroke-width="1.5"/>
+  <text x="52" y="653" fill="#E2E8F0" font-size="12">Enviar informe directorio</text>
+  <text x="368" y="653" text-anchor="end" fill="#F43F5E" font-size="10" font-weight="700">18:00</text>
+
+  <!-- Bottom Nav -->
+  <rect x="0" y="682" width="400" height="98" fill="url(#nav)"/>
+  <rect x="0" y="682" width="400" height="1" fill="rgba(255,255,255,0.06)"/>
+  <text x="53" y="716" text-anchor="middle" font-size="18">📊</text>
+  <text x="53" y="734" text-anchor="middle" fill="#475569" font-size="9">Inicio</text>
+  <text x="125" y="716" text-anchor="middle" font-size="18">✅</text>
+  <text x="125" y="734" text-anchor="middle" fill="#475569" font-size="9">Tareas</text>
+  <circle cx="200" cy="706" r="26" fill="url(#indigoBtn)"/>
+  <text x="200" y="713" text-anchor="middle" fill="#fff" font-size="22" font-weight="300">+</text>
+  <rect x="244" y="692" width="58" height="52" rx="14" fill="rgba(79,70,229,0.25)" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+  <text x="273" y="716" text-anchor="middle" font-size="18">📅</text>
+  <text x="273" y="734" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">Calendario</text>
+  <text x="350" y="716" text-anchor="middle" font-size="18">⚙️</text>
+  <text x="350" y="734" text-anchor="middle" fill="#475569" font-size="9">Config</text>
+
+  <rect x="140" y="4" width="120" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="200" y="760" text-anchor="middle" fill="#1E293B" font-size="11">FlowTime — Calendario</text>
+</svg>

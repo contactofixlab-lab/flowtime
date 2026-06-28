@@ -2,7 +2,7 @@
 
 Índice completo de la documentación de planificación.
 
-## Archivos
+## Archivos de documentación
 
 | Archivo | Descripción |
 |---------|-------------|
@@ -13,7 +13,7 @@
 | [05-bot-telegram.md](./05-bot-telegram.md) | Comandos, flujos y lógica del bot |
 | [06-configuracion-entorno.md](./06-configuracion-entorno.md) | Variables de entorno y servicios externos |
 
-## Diagramas
+## Diagramas de flujo
 
 | Diagrama | Descripción |
 |----------|-------------|
@@ -23,7 +23,27 @@
 | [diagramas/schema-er.svg](./diagramas/schema-er.svg) | Diagrama entidad-relación de la base de datos |
 | [diagramas/flujo-recordatorios.svg](./diagramas/flujo-recordatorios.svg) | Ciclo de vida de un recordatorio |
 
+## Diagramas UML
+
+| Diagrama | Descripción |
+|----------|-------------|
+| [diagramas/uml-casos-de-uso.svg](./diagramas/uml-casos-de-uso.svg) | Casos de uso: usuario web, bot Telegram, Vercel Cron |
+| [diagramas/uml-secuencia-crear-tarea-web.svg](./diagramas/uml-secuencia-crear-tarea-web.svg) | Secuencia: crear tarea desde la app web |
+| [diagramas/uml-secuencia-bot.svg](./diagramas/uml-secuencia-bot.svg) | Secuencia: crear tarea por voz via bot Telegram |
+| [diagramas/uml-componentes.svg](./diagramas/uml-componentes.svg) | Componentes: frontend, API layer, servicios externos |
+| [diagramas/uml-despliegue.svg](./diagramas/uml-despliegue.svg) | Despliegue: Vercel, Neon, Telegram API, OpenAI |
+
+## Mockups de diseño
+
+| Mockup | Descripción |
+|--------|-------------|
+| [mockups/mockup-dashboard.svg](./mockups/mockup-dashboard.svg) | Pantalla principal con métricas y tareas del día |
+| [mockups/mockup-tareas.svg](./mockups/mockup-tareas.svg) | Lista de tareas con filtros y prioridades |
+| [mockups/mockup-calendario.svg](./mockups/mockup-calendario.svg) | Vista de calendario mensual con eventos |
+| [mockups/mockup-nueva-tarea.svg](./mockups/mockup-nueva-tarea.svg) | Modal de creación de tarea (bottom sheet) |
+| [mockups/mockup-bot-telegram.svg](./mockups/mockup-bot-telegram.svg) | Conversación con el bot (texto y voz) |
+
 ---
 
-**Última actualización:** 2026-06-28  
-**Versión del plan:** 1.0
+**Última actualización:** 2026-06-28
+**Versión del plan:** 1.1

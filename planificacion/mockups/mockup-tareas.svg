@@ -1,0 +1,131 @@
+<svg viewBox="0 0 400 780" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A1A"/>
+      <stop offset="50%" style="stop-color:#0D0D28"/>
+      <stop offset="100%" style="stop-color:#120A2E"/>
+    </linearGradient>
+    <linearGradient id="navGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(15,15,40,0.95)"/>
+      <stop offset="100%" style="stop-color:rgba(10,10,30,0.98)"/>
+    </linearGradient>
+    <linearGradient id="indigoBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="30"/></filter>
+  </defs>
+
+  <rect width="400" height="780" fill="url(#bg)" rx="40"/>
+  <circle cx="320" cy="120" r="100" fill="rgba(79,70,229,0.12)" filter="url(#blur1)"/>
+
+  <!-- Status bar -->
+  <text x="24" y="26" fill="#94A3B8" font-size="11" font-weight="600">9:41</text>
+  <text x="376" y="26" text-anchor="end" fill="#94A3B8" font-size="11">●●●</text>
+
+  <!-- Header -->
+  <text x="24" y="68" fill="#E2E8F0" font-size="24" font-weight="800">Mis Tareas</text>
+  <rect x="316" y="50" width="68" height="30" rx="15" fill="url(#indigoBtn)"/>
+  <text x="350" y="70" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">+ Nueva</text>
+
+  <!-- Search bar -->
+  <rect x="16" y="84" width="368" height="38" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="38" y="108" fill="#475569" font-size="14">🔍</text>
+  <text x="58" y="108" fill="#475569" font-size="12">Buscar tarea...</text>
+
+  <!-- Filter pills -->
+  <rect x="16" y="132" width="60" height="26" rx="13" fill="url(#indigoBtn)"/>
+  <text x="46" y="149" text-anchor="middle" fill="#fff" font-size="10" font-weight="700">Todas</text>
+
+  <rect x="84" y="132" width="72" height="26" rx="13" fill="rgba(244,63,94,0.15)" stroke="rgba(244,63,94,0.3)" stroke-width="1"/>
+  <text x="120" y="149" text-anchor="middle" fill="#FB7185" font-size="10">Urgentes</text>
+
+  <rect x="164" y="132" width="66" height="26" rx="13" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="197" y="149" text-anchor="middle" fill="#64748B" font-size="10">En curso</text>
+
+  <rect x="238" y="132" width="52" height="26" rx="13" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="264" y="149" text-anchor="middle" fill="#64748B" font-size="10">Hoy</text>
+
+  <rect x="298" y="132" width="68" height="26" rx="13" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="332" y="149" text-anchor="middle" fill="#64748B" font-size="10">Esta sem.</text>
+
+  <!-- Section: Urgente -->
+  <text x="16" y="182" fill="#FB7185" font-size="11" font-weight="700" letter-spacing="1">🔴 URGENTE · 2</text>
+
+  <!-- Task Urgente 1 -->
+  <rect x="16" y="192" width="368" height="68" rx="14" fill="rgba(244,63,94,0.08)" stroke="rgba(244,63,94,0.2)" stroke-width="1"/>
+  <rect x="16" y="192" width="4" height="68" rx="2" fill="#F43F5E"/>
+  <!-- Checkbox -->
+  <circle cx="38" cy="226" r="11" fill="transparent" stroke="rgba(244,63,94,0.5)" stroke-width="1.5"/>
+  <text x="56" y="216" fill="#E2E8F0" font-size="13" font-weight="600">Llamar al banco</text>
+  <text x="56" y="232" fill="#64748B" font-size="10">Vence hoy a las 10:00</text>
+  <rect x="56" y="242" width="40" height="14" rx="7" fill="rgba(245,158,11,0.2)"/>
+  <text x="76" y="253" text-anchor="middle" fill="#FBBF24" font-size="8">finanzas</text>
+  <text x="368" y="221" text-anchor="end" fill="#64748B" font-size="16">···</text>
+
+  <!-- Task Urgente 2 -->
+  <rect x="16" y="268" width="368" height="68" rx="14" fill="rgba(244,63,94,0.08)" stroke="rgba(244,63,94,0.2)" stroke-width="1"/>
+  <rect x="16" y="268" width="4" height="68" rx="2" fill="#F43F5E"/>
+  <circle cx="38" cy="302" r="11" fill="transparent" stroke="rgba(244,63,94,0.5)" stroke-width="1.5"/>
+  <text x="56" y="292" fill="#E2E8F0" font-size="13" font-weight="600">Enviar informe directorio</text>
+  <text x="56" y="308" fill="#64748B" font-size="10">Vence hoy a las 18:00</text>
+  <rect x="56" y="318" width="44" height="14" rx="7" fill="rgba(79,70,229,0.2)"/>
+  <text x="78" y="329" text-anchor="middle" fill="#818CF8" font-size="8">reportes</text>
+  <text x="368" y="297" text-anchor="end" fill="#64748B" font-size="16">···</text>
+
+  <!-- Section: Alta -->
+  <text x="16" y="356" fill="#FBBF24" font-size="11" font-weight="700" letter-spacing="1">🟠 ALTA · 3</text>
+
+  <!-- Task Alta 1 -->
+  <rect x="16" y="366" width="368" height="64" rx="14" fill="rgba(245,158,11,0.07)" stroke="rgba(245,158,11,0.18)" stroke-width="1"/>
+  <rect x="16" y="366" width="4" height="64" rx="2" fill="#F59E0B"/>
+  <circle cx="38" cy="398" r="11" fill="transparent" stroke="rgba(245,158,11,0.5)" stroke-width="1.5"/>
+  <text x="56" y="388" fill="#E2E8F0" font-size="13" font-weight="600">Revisar contrato Empresa X</text>
+  <text x="56" y="404" fill="#64748B" font-size="10">Mañana · Legal</text>
+  <text x="368" y="393" text-anchor="end" fill="#64748B" font-size="16">···</text>
+
+  <!-- Task Alta 2 (in progress) -->
+  <rect x="16" y="438" width="368" height="64" rx="14" fill="rgba(14,165,233,0.07)" stroke="rgba(14,165,233,0.18)" stroke-width="1"/>
+  <rect x="16" y="438" width="4" height="64" rx="2" fill="#0EA5E9"/>
+  <circle cx="38" cy="470" r="11" fill="rgba(14,165,233,0.2)" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="38" y="474" text-anchor="middle" fill="#38BDF8" font-size="10">▶</text>
+  <text x="56" y="460" fill="#E2E8F0" font-size="13" font-weight="600">Preparar presentación Q3</text>
+  <text x="56" y="476" fill="#0EA5E9" font-size="10">En progreso · Viernes</text>
+  <text x="368" y="465" text-anchor="end" fill="#64748B" font-size="16">···</text>
+
+  <!-- Section: Media -->
+  <text x="16" y="522" fill="#818CF8" font-size="11" font-weight="700" letter-spacing="1">🔵 MEDIA · 2</text>
+
+  <!-- Task media 1 (completed) -->
+  <rect x="16" y="532" width="368" height="60" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="16" y="532" width="4" height="60" rx="2" fill="#10B981"/>
+  <circle cx="38" cy="562" r="11" fill="rgba(16,185,129,0.3)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="38" y="566" text-anchor="middle" fill="#34D399" font-size="12">✓</text>
+  <text x="56" y="554" fill="#475569" font-size="13" font-weight="600" text-decoration="line-through">Ordenar carpetas drive</text>
+  <text x="56" y="570" fill="#374151" font-size="10">Completada hoy</text>
+
+  <!-- Task media 2 -->
+  <rect x="16" y="600" width="368" height="60" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <rect x="16" y="600" width="4" height="60" rx="2" fill="#4F46E5"/>
+  <circle cx="38" cy="630" r="11" fill="transparent" stroke="rgba(79,70,229,0.4)" stroke-width="1.5"/>
+  <text x="56" y="622" fill="#E2E8F0" font-size="13" font-weight="600">Agendar reunión equipo TI</text>
+  <text x="56" y="638" fill="#64748B" font-size="10">Sin fecha · Trabajo</text>
+
+  <!-- Bottom Nav -->
+  <rect x="0" y="682" width="400" height="98" fill="url(#navGrad)"/>
+  <rect x="0" y="682" width="400" height="1" fill="rgba(255,255,255,0.06)"/>
+  <text x="53" y="716" text-anchor="middle" font-size="18">📊</text>
+  <text x="53" y="734" text-anchor="middle" fill="#475569" font-size="9">Inicio</text>
+  <rect x="96" y="692" width="58" height="52" rx="14" fill="rgba(79,70,229,0.25)" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+  <text x="125" y="716" text-anchor="middle" font-size="18">✅</text>
+  <text x="125" y="734" text-anchor="middle" fill="#818CF8" font-size="9" font-weight="700">Tareas</text>
+  <circle cx="200" cy="706" r="26" fill="url(#indigoBtn)"/>
+  <text x="200" y="713" text-anchor="middle" fill="#fff" font-size="22" font-weight="300">+</text>
+  <text x="274" y="716" text-anchor="middle" font-size="18">📅</text>
+  <text x="274" y="734" text-anchor="middle" fill="#475569" font-size="9">Calendario</text>
+  <text x="350" y="716" text-anchor="middle" font-size="18">⚙️</text>
+  <text x="350" y="734" text-anchor="middle" fill="#475569" font-size="9">Config</text>
+
+  <rect x="140" y="4" width="120" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="200" y="760" text-anchor="middle" fill="#1E293B" font-size="11">FlowTime — Módulo Tareas</text>
+</svg>
