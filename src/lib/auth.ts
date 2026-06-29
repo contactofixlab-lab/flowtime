@@ -41,8 +41,8 @@ providers.push(
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
-  // @ts-expect-error providers built dynamically
-  providers,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  providers: providers as any,
   callbacks: {
     async jwt({ token, user }) {
       if (user) token.id = user.id;

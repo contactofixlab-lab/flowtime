@@ -26,16 +26,12 @@ export default function LoginForm({ googleEnabled }: { googleEnabled: boolean })
     if (!email.trim()) return;
     setLoading(true);
     setError("");
-    const res = await signIn("credentials", {
+    await signIn("credentials", {
       email: email.trim(),
       name: name.trim() || email.split("@")[0],
       callbackUrl: "/dashboard",
       redirect: true,
     });
-    if (res?.error) {
-      setError("No se pudo iniciar sesión.");
-      setLoading(false);
-    }
   }
 
   return (

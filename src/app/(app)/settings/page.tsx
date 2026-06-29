@@ -1,22 +1,33 @@
-import { auth } from "@/lib/auth";
-import { signOut } from "@/lib/auth";
-import { LogOut } from "lucide-react";
+import { auth, signOut } from "@/lib/auth";
+
+const card: React.CSSProperties = {
+  background: "rgba(255,255,255,0.04)",
+  border: "1px solid rgba(255,255,255,0.08)",
+  borderRadius: 18,
+  backdropFilter: "blur(16px)",
+  overflow: "hidden",
+};
 
 function Row({ label, sub, right }: { label: string; sub?: string; right?: React.ReactNode }) {
   return (
-    <div className="flex items-center justify-between px-4 py-3.5 border-b border-white/[0.05] last:border-0">
+    <div style={{
+      display: "flex", alignItems: "center", justifyContent: "space-between",
+      padding: "14px 16px", borderBottom: "1px solid rgba(255,255,255,0.05)",
+    }}>
       <div>
-        <p className="text-sm font-medium" style={{ color: "#E2E8F0" }}>
-          {label}
-        </p>
-        {sub && (
-          <p className="text-xs mt-0.5" style={{ color: "#475569" }}>
-            {sub}
-          </p>
-        )}
+        <p style={{ color: "#E2E8F0", fontSize: 14, fontWeight: 500, margin: 0 }}>{label}</p>
+        {sub && <p style={{ color: "#475569", fontSize: 12, margin: "2px 0 0" }}>{sub}</p>}
       </div>
       {right}
     </div>
+  );
+}
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <p style={{ color: "#334155", fontSize: 11, fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", margin: "0 0 8px 4px" }}>
+      {children}
+    </p>
   );
 }
 
@@ -25,89 +36,95 @@ export default async function SettingsPage() {
   const user = session!.user!;
 
   return (
-    <div className="max-w-2xl mx-auto px-4 pt-8">
-      <h1 className="text-2xl font-black mb-6" style={{ color: "#E2E8F0" }}>
+    <div style={{ maxWidth: 480, margin: "0 auto", padding: "24px 16px 0" }}>
+
+      <h1 style={{ color: "#F1F5F9", fontSize: 22, fontWeight: 800, margin: "0 0 24px", letterSpacing: "-0.02em" }}>
         Configuración
       </h1>
 
-      {/* Profile */}
-      <div className="glass-card overflow-hidden mb-4">
-        <div className="px-4 py-4 flex items-center gap-4 border-b border-white/[0.05]">
+      {/* Perfil */}
+      <SectionLabel>Perfil</SectionLabel>
+      <div style={{ ...card, marginBottom: 20 }}>
+        <div style={{ padding: "16px", display: "flex", alignItems: "center", gap: 14, borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
           {user.image ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={user.image} alt="" className="w-12 h-12 rounded-full" />
+            <img src={user.image} alt="" style={{ width: 52, height: 52, borderRadius: "50%", border: "2px solid rgba(79,70,229,0.4)" }} />
           ) : (
-            <div
-              className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white text-lg"
-              style={{ background: "linear-gradient(135deg,#4F46E5,#7C3AED)" }}
-            >
-              {user.name?.[0] ?? "U"}
-            </div>
+            <div style={{
+              width: 52, height: 52, borderRadius: "50%",
+              background: "linear-gradient(135deg,#4F46E5,#7C3AED)",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: 20, fontWeight: 800, color: "#fff",
+            }}>{user.name?.[0] ?? "U"}</div>
           )}
           <div>
-            <p className="font-semibold" style={{ color: "#E2E8F0" }}>
-              {user.name ?? "Usuario"}
-            </p>
-            <p className="text-sm" style={{ color: "#64748B" }}>
-              {user.email}
-            </p>
+            <p style={{ color: "#F1F5F9", fontSize: 16, fontWeight: 700, margin: 0 }}>{user.name ?? "Usuario"}</p>
+            <p style={{ color: "#475569", fontSize: 13, margin: "2px 0 0" }}>{user.email}</p>
           </div>
         </div>
-        <Row label="Zona horaria" sub="America/Santiago" />
+        <Row label="Zona horaria" sub="America/Santiago (UTC-4)" />
         <Row label="Idioma" sub="Español (Chile)" />
       </div>
 
       {/* Telegram */}
-      <p className="text-xs font-bold mb-2 px-1 tracking-wider" style={{ color: "#475569" }}>
-        TELEGRAM
-      </p>
-      <div className="glass-card overflow-hidden mb-4">
-        <Row
-          label="Bot FlowTime"
-          sub="Vincula tu cuenta para recibir recordatorios"
-          right={
-            <span className="text-xs px-2 py-1 rounded-full" style={{ background: "rgba(100,116,139,0.15)", color: "#64748B" }}>
-              Próximamente
-            </span>
-          }
-        />
+      <SectionLabel>Telegram</SectionLabel>
+      <div style={{ ...card, marginBottom: 20 }}>
+        <div style={{ padding: "14px 16px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div>
+            <p style={{ color: "#E2E8F0", fontSize: 14, fontWeight: 500, margin: 0 }}>Bot FlowTime</p>
+            <p style={{ color: "#475569", fontSize: 12, margin: "2px 0 0" }}>Vincula tu cuenta para recordatorios</p>
+          </div>
+          <span style={{
+            fontSize: 11, fontWeight: 600, padding: "4px 10px", borderRadius: 20,
+            background: "rgba(79,70,229,0.12)", color: "#818CF8",
+            border: "1px solid rgba(79,70,229,0.2)", whiteSpace: "nowrap",
+          }}>Próximamente</span>
+        </div>
       </div>
 
       {/* Notificaciones */}
-      <p className="text-xs font-bold mb-2 px-1 tracking-wider" style={{ color: "#475569" }}>
-        NOTIFICACIONES
-      </p>
-      <div className="glass-card overflow-hidden mb-4">
-        <Row label="Recordatorios" sub="Recibir avisos antes de vencer" />
-        <Row label="Anticipación" sub="30 minutos antes" />
+      <SectionLabel>Notificaciones</SectionLabel>
+      <div style={{ ...card, marginBottom: 20 }}>
+        <Row
+          label="Recordatorios"
+          sub="Recibir avisos antes de vencer"
+          right={
+            <div style={{
+              width: 42, height: 24, borderRadius: 12,
+              background: "rgba(79,70,229,0.15)", border: "1px solid rgba(79,70,229,0.3)",
+              display: "flex", alignItems: "center", padding: "2px",
+            }}>
+              <div style={{ width: 18, height: 18, borderRadius: 9, background: "#334155" }} />
+            </div>
+          }
+        />
+        <div style={{ padding: "14px 16px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+          <p style={{ color: "#E2E8F0", fontSize: 14, fontWeight: 500, margin: 0 }}>Anticipación</p>
+          <span style={{ color: "#818CF8", fontSize: 13, fontWeight: 600 }}>30 min</span>
+        </div>
       </div>
 
       {/* Cuenta */}
-      <p className="text-xs font-bold mb-2 px-1 tracking-wider" style={{ color: "#475569" }}>
-        CUENTA
-      </p>
-      <div className="glass-card overflow-hidden mb-4">
-        <form
-          action={async () => {
-            "use server";
-            await signOut({ redirectTo: "/login" });
-          }}
-        >
+      <SectionLabel>Cuenta</SectionLabel>
+      <div style={{ ...card, marginBottom: 24 }}>
+        <form action={async () => { "use server"; await signOut({ redirectTo: "/login" }); }}>
           <button
             type="submit"
-            className="w-full text-left px-4 py-3.5 flex items-center gap-3 transition hover:bg-white/5"
+            style={{
+              width: "100%", textAlign: "left", padding: "14px 16px",
+              display: "flex", alignItems: "center", gap: 10,
+              background: "none", border: "none", cursor: "pointer", fontFamily: "inherit",
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "rgba(244,63,94,0.05)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "none"; }}
           >
-            <LogOut size={16} style={{ color: "#F43F5E" }} />
-            <span className="text-sm font-medium" style={{ color: "#F43F5E" }}>
-              Cerrar sesión
-            </span>
+            <span style={{ fontSize: 16 }}>🚪</span>
+            <span style={{ color: "#F43F5E", fontSize: 14, fontWeight: 600 }}>Cerrar sesión</span>
           </button>
         </form>
       </div>
 
-      <p className="text-center text-xs pb-4" style={{ color: "#1E293B" }}>
-        FlowTime v0.1.0
-      </p>
+      <p style={{ textAlign: "center", color: "#1E293B", fontSize: 11 }}>FlowTime v0.1.0</p>
     </div>
   );
 }
