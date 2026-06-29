@@ -53,7 +53,11 @@ export default async function HistoryPage() {
   ];
 
   return (
-    <div style={{ maxWidth: 480, margin: "0 auto", padding: "24px 16px 0" }}>
+    <div className="page-layout" style={{ padding: "24px 16px 0" }}>
+      <style>{`
+        .page-layout { max-width: 560px; margin: 0 auto; }
+        @media (min-width: 1024px) { .page-layout { max-width: 720px; padding: 40px 48px !important; } }
+      `}</style>
 
       {/* Header */}
       <h1 style={{ color: "#F1F5F9", fontSize: 22, fontWeight: 800, margin: "0 0 20px", letterSpacing: "-0.02em" }}>

@@ -36,7 +36,11 @@ export default async function SettingsPage() {
   const user = session!.user!;
 
   return (
-    <div style={{ maxWidth: 480, margin: "0 auto", padding: "24px 16px 0" }}>
+    <div className="page-layout" style={{ padding: "24px 16px 0" }}>
+      <style>{`
+        .page-layout { max-width: 560px; margin: 0 auto; }
+        @media (min-width: 1024px) { .page-layout { max-width: 640px; padding: 40px 48px !important; } }
+      `}</style>
 
       <h1 style={{ color: "#F1F5F9", fontSize: 22, fontWeight: 800, margin: "0 0 24px", letterSpacing: "-0.02em" }}>
         Configuración
@@ -115,9 +119,7 @@ export default async function SettingsPage() {
               display: "flex", alignItems: "center", gap: 10,
               background: "none", border: "none", cursor: "pointer", fontFamily: "inherit",
             }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "rgba(244,63,94,0.05)"; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "none"; }}
-          >
+            >
             <span style={{ fontSize: 16 }}>🚪</span>
             <span style={{ color: "#F43F5E", fontSize: 14, fontWeight: 600 }}>Cerrar sesión</span>
           </button>

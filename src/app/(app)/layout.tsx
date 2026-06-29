@@ -1,6 +1,7 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import FloatingPillNav from "@/components/FloatingPillNav";
+import Sidebar from "@/components/Sidebar";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const session = await auth();
@@ -8,31 +9,45 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <div style={{ minHeight: "100vh", background: "#0A0A1A", position: "relative", overflow: "hidden" }}>
-      {/* Ambient blobs fijos */}
+      {/* Ambient blobs */}
       <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0 }}>
         <div style={{
-          position: "absolute", top: "-10%", left: "-15%",
-          width: "55%", height: "55%", borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)",
-          filter: "blur(60px)",
+          position: "absolute", top: "-10%", left: "-15%", width: "55%", height: "55%", borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)", filter: "blur(60px)",
         }} />
         <div style={{
-          position: "absolute", bottom: "10%", right: "-10%",
-          width: "50%", height: "50%", borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(124,58,237,0.09) 0%, transparent 70%)",
-          filter: "blur(60px)",
+          position: "absolute", bottom: "10%", right: "-10%", width: "50%", height: "50%", borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(124,58,237,0.09) 0%, transparent 70%)", filter: "blur(60px)",
         }} />
         <div style={{
-          position: "absolute", top: "50%", left: "40%",
-          width: "35%", height: "35%", borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(14,165,233,0.05) 0%, transparent 70%)",
-          filter: "blur(50px)",
+          position: "absolute", top: "50%", left: "40%", width: "35%", height: "35%", borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(14,165,233,0.05) 0%, transparent 70%)", filter: "blur(50px)",
         }} />
       </div>
-      <main style={{ position: "relative", zIndex: 1, paddingBottom: 100 }}>
+
+      {/* Sidebar — solo visible en desktop */}
+      <Sidebar user={session.user ?? {}} />
+
+      {/* Contenido principal */}
+      <div className="app-main" style={{ position: "relative", zIndex: 1 }}>
         {children}
-      </main>
+      </div>
+
+      {/* Pill nav — solo visible en mobile */}
       <FloatingPillNav />
+
+      <style>{`
+        .app-main {
+          padding-bottom: 100px;
+        }
+        @media (min-width: 1024px) {
+          .app-main {
+            margin-left: 240px;
+            padding-bottom: 40px;
+            padding-top: 0;
+          }
+        }
+      `}</style>
     </div>
   );
 }
