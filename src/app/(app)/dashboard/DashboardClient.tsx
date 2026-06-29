@@ -171,7 +171,7 @@ export default function DashboardClient({ user, todayTasks, pendingCount, comple
         }
         @media (min-width: 1024px) {
           .dashboard-layout {
-            max-width: 100%;
+            max-width: 1200px;
             padding: 40px 48px !important;
           }
           .stats-grid {

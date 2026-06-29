@@ -204,7 +204,7 @@ export default function TasksClient({ initialTasks }: { initialTasks: TaskWithTa
         }
         @media (min-width: 1024px) {
           .tasks-layout {
-            max-width: 100%;
+            max-width: 1200px;
             padding: 40px 48px !important;
           }
           .tasks-grid {

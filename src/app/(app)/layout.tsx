@@ -1,7 +1,7 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import FloatingPillNav from "@/components/FloatingPillNav";
-import Sidebar from "@/components/Sidebar";
+import TopNav from "@/components/TopNav";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const session = await auth();
@@ -25,15 +25,15 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         }} />
       </div>
 
-      {/* Sidebar — solo visible en desktop */}
-      <Sidebar user={session.user ?? {}} />
+      {/* Top navbar — solo desktop */}
+      <TopNav user={session.user ?? {}} />
 
       {/* Contenido principal */}
       <div className="app-main" style={{ position: "relative", zIndex: 1 }}>
         {children}
       </div>
 
-      {/* Pill nav — solo visible en mobile */}
+      {/* Pill nav — mobile + desktop */}
       <FloatingPillNav />
 
       <style>{`
@@ -42,9 +42,8 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         }
         @media (min-width: 1024px) {
           .app-main {
-            margin-left: 240px;
-            padding-bottom: 40px;
-            padding-top: 0;
+            padding-top: 60px;
+            padding-bottom: 100px;
           }
         }
       `}</style>
